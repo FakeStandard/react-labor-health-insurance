@@ -4,6 +4,7 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/calculation";
 import HealthGrading from "../HealthGrading/HealthGrading";
+import LaborGrading from "../LaborGrading/LaborGrading";
 // import Calculation from "../Calculation/calculation";
 import { IMenuProps } from "./IMenuProps";
 import { IMenuStates } from "./IMenuStates";
@@ -14,7 +15,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "4",
+      selectKey: "3",
     }
   }
 
@@ -37,12 +38,12 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
             <NavbarToggle aria-controls="menu-navbar" />
             <NavbarCollapse id="menu-navbar">
               <Nav>
-                <NavLink href="#" eventKey={1}>薪資即時試算</NavLink>
-                <NavLink href="#" eventKey={2}>勞健保及勞退費用對照表</NavLink>
+                <NavLink eventKey={1}>薪資即時試算</NavLink>
+                <NavLink eventKey={2}>勞健保及勞退費用對照表</NavLink>
                 <NavDropdown title="投保薪資分級表">
-                  <NavDropdown.Item href="#1" eventKey={3}>勞工保險投保分級表</NavDropdown.Item>
-                  <NavDropdown.Item href="#2" eventKey={4}>全民健康保險投保金額分級表</NavDropdown.Item>
-                  {/* <NavDropdown.Divider /> */}
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item eventKey={3}>勞工保險投保分級表</NavDropdown.Item>
+                  <NavDropdown.Item eventKey={4}>全民健康保險投保金額分級表</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </NavbarCollapse>
@@ -61,7 +62,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
         {/* 勞工保險投保分級表 */}
         {(selectKey === "3") && (
-          <div>勞工保險投保分級表</div>
+          <LaborGrading />
         )}
 
         {/* 全民健康保險投保分級表 */}
