@@ -59,7 +59,7 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
                 </thead>
                 <tbody>
                   {items.map(item => (
-                    <tr>
+                    <tr key={item.Level}>
                       <td rowSpan={1}>{item.Distance}</td>
                       <td>{item.Level}</td>
                       <td>{item.InsuredSalaryLevel}</td>
