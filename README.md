@@ -1,46 +1,23 @@
-# Getting Started with Create React App
+# react-labor-health-insurance
+:rocket: Technology：React with Typescript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:fire: 核心構想：嘗試解決每次計算薪資時都須一一查表，尤其是面對全部員工的薪資時容易眼花撩亂，深怕一不小心就填錯，故摒棄查表方式，改為使用一個可即時運算薪資的功能，此小品就這樣誕生了！
 
-## Available Scripts
+:fire: 自 2022/7/1 起健保級距調整
 
-In the project directory, you can run:
+## History
+| Date | Description |
+| -- | -- |
+| 2022/06/06 | Init |
+| 2022/06/06 | Add Page - 2022 全民健康保險投保金額分級表 |
+<!-- |  | Add Page - 2021 勞保投保薪資分級表 |
+|  | Add Page - 2021 薪資即時試算 |
+|  | Add Page - 2021 勞健保及勞退費用對照表 | -->
 
-### `npm start`
+## Product
+[Labor Health Insurance](https://fakestandard.github.io/react-labor-health-insurance)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Open Data
+[勞保投保薪資分級表](https://data.gov.tw/dataset/6258)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[全民健康保險投保金額分級表](https://data.gov.tw/dataset/20251)
