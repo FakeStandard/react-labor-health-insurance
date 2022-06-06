@@ -31,7 +31,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
     return (
       <div>
-        <Navbar bg="dark" variant="dark" onSelect={this.handleSelect}>
+        <Navbar expand="lg" bg="dark" variant="dark" onSelect={this.handleSelect}>
           <Container>
             <NavbarBrand>2022 勞健保與薪資查詢</NavbarBrand>
             <NavbarToggle aria-controls="menu-navbar" />
