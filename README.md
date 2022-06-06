@@ -5,6 +5,8 @@
 
 :fire: 自 2022/7/1 起健保級距調整
 
+:fire: 嘗試使用 React with Typescript 製作
+
 ## History
 | Date | Description |
 | -- | -- |
