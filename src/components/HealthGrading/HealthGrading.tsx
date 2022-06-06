@@ -49,7 +49,7 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
           <Card.Body>
             <Card.Text>
               <Table striped hover responsive>
-                <thead>
+                <thead className="table-success">
                   <tr>
                     <th>組別級距</th>
                     <th>投保等級</th>
