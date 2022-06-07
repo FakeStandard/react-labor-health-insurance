@@ -3,6 +3,7 @@ import { Container, Nav, Navbar, NavbarBrand, NavDropdown, NavItem, NavLink } fr
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/calculation";
+import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
 import LaborGrading from "../LaborGrading/LaborGrading";
 // import Calculation from "../Calculation/calculation";
@@ -15,7 +16,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "3",
+      selectKey: "2",
     }
   }
 
@@ -34,7 +35,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
       <div>
         <Navbar expand="lg" bg="dark" variant="dark" onSelect={this.handleSelect}>
           <Container>
-            <NavbarBrand>2022 勞健保與薪資查詢</NavbarBrand>
+            <NavbarBrand>勞健保與薪資查詢</NavbarBrand>
             <NavbarToggle aria-controls="menu-navbar" />
             <NavbarCollapse id="menu-navbar">
               <Nav>
@@ -57,7 +58,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
         {/* 勞健保及勞退費用對照表 */}
         {(selectKey === "2") && (
-          <div>勞健保及勞退費用對照表</div>
+          <ComparisonTable />
         )}
 
         {/* 勞工保險投保分級表 */}
