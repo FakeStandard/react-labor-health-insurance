@@ -1,0 +1,74 @@
+{
+    "normal": [
+        {
+            "Level": "第1級",
+            "SalaryRange": "25,250以下",
+            "InsuredSalaryLevel": "25,250"
+        },
+        {
+            "Level": "第2級",
+            "SalaryRange": "25,251-26,400",
+            "InsuredSalaryLevel": "26,400"
+        },
+        {
+            "Level": "第3級",
+            "SalaryRange": "26,401-27,600",
+            "InsuredSalaryLevel": "27,600"
+        },
+        {
+            "Level": "第4級",
+            "SalaryRange": "27,601-28,800",
+            "InsuredSalaryLevel": "28,800"
+        },
+        {
+            "Level": "第5級",
+            "SalaryRange": "28,801-30,300",
+            "InsuredSalaryLevel": "30,300"
+        },
+        {
+            "Level": "第6級",
+            "SalaryRange": "30,301-31,800",
+            "InsuredSalaryLevel": "31,800"
+        },
+        {
+            "Level": "第7級",
+            "SalaryRange": "31,801-33,300",
+            "InsuredSalaryLevel": "33,300"
+        },
+        {
+            "Level": "第8級",
+            "SalaryRange": "33,301-34,800",
+            "InsuredSalaryLevel": "34,800"
+        },
+        {
+            "Level": "第9級",
+            "SalaryRange": "34,801-36,300",
+            "InsuredSalaryLevel": "36,300"
+        },
+        {
+            "Level": "第10級",
+            "SalaryRange": "36,301-38,200",
+            "InsuredSalaryLevel": "38,200"
+        },
+        {
+            "Level": "第11級",
+            "SalaryRange": "38,201-40,100",
+            "InsuredSalaryLevel": "40,100"
+        },
+        {
+            "Level": "第12級",
+            "SalaryRange": "40,101-42,000",
+            "InsuredSalaryLevel": "42,000"
+        },
+        {
+            "Level": "第13級",
+            "SalaryRange": "42,001-43,900",
+            "InsuredSalaryLevel": "43,900"
+        },
+        {
+            "Level": "第14級",
+            "SalaryRange": "43,901以上",
+            "InsuredSalaryLevel": "45,800"
+        }
+    ]
+}
