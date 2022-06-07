@@ -6,10 +6,8 @@ import Calculation from "../Calculation/calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
 import LaborGrading from "../LaborGrading/LaborGrading";
-// import Calculation from "../Calculation/calculation";
 import { IMenuProps } from "./IMenuProps";
 import { IMenuStates } from "./IMenuStates";
-// import Calculation from 'calculation';
 
 export default class Menu extends React.Component<IMenuProps, IMenuStates> {
   constructor(props: IMenuProps) {

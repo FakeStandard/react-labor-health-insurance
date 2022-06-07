@@ -1,9 +1,6 @@
+import { IHealthInfo } from "../../interface/IHealthInfo"
+
 export interface IHealthGradingStates {
-    isLoaded: boolean
-    items: [{
-        Distance: string,
-        InsuredSalaryLevel: string,
-        Level: string,
-        SalaryRange: string
-    }]
+    isLoaded: boolean,
+    items: IHealthInfo[],
 }

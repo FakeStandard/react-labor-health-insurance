@@ -10,7 +10,7 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
 
     this.state = {
       isLoaded: false,
-      items: [{ Level: "", SalaryRange: "", InsuredSalaryLevel: "" }]
+      items: []
     }
   }
 
@@ -36,9 +36,9 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
     return (
       <div className="LaborGrading">
         <h3>
-          <span>2022 勞工保險投保薪資分級表</span>
+          <span>勞工保險投保薪資分級表</span>
         </h3>
-        <span style={{ color: "#CC0000" }}>111.1.1生效</span>
+        <span style={{ color: "#CC0000" }}>2022.1.1 起生效</span>
 
         <Card className="shadow-lg rounded"
           style={{

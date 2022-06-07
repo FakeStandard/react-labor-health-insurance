@@ -10,7 +10,7 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
 
     this.state = {
       isLoaded: false,
-      items: [{ Distance: "", InsuredSalaryLevel: "", Level: "", SalaryRange: "" }]
+      items: []
     }
   }
 
@@ -36,9 +36,9 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
     return (
       <div className="HealthGrading">
         <h3>
-          <span>2022 全民健康保險投保金額分級表</span>
+          <span>全民健康保險投保金額分級表</span>
         </h3>
-        <span style={{ color: "#CC0000" }}>111.7.1生效</span>
+        <span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
 
         <Card className="shadow-lg rounded"
           style={{

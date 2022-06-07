@@ -1,8 +1,6 @@
+import { ILaborInfo } from "../../interface/ILaborInfo";
+
 export interface ILaborGradingStates {
     isLoaded: boolean,
-    items: [{
-        Level: string,
-        SalaryRange: string,
-        InsuredSalaryLevel: string
-    }]
+    items: ILaborInfo[],
 }
