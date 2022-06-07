@@ -31,7 +31,6 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
   }
 
   getData = async () => {
-    let laborInfo: [] = [];
     let healthInfo: IHealthInfo[] = [];
     let Info: IItemInfo[] = [];
     let laborLength: number = 0;
@@ -41,7 +40,6 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
     await fetch("json/labor-grading.json")
       .then(res => res.json())
       .then(res => {
-        laborInfo = res.normal;
         laborLength = res.normal.length;
       })
       .catch((err) => console.log(err))
