@@ -5,11 +5,11 @@
 
 :fire: 使用 React with Typescript 製作
 
-::pushpin:: 自 2022/1/1 起勞工保險級距調整
+:pushpin: 自 2022/1/1 起勞工保險級距調整
 
-::pushpin:: 自 2022/7/1 起全民健康保險級距調整
+:pushpin: 自 2022/7/1 起全民健康保險級距調整
 
-::pushpin:: 自 2022/1/1 起勞工退休金級距調整
+:pushpin: 自 2022/1/1 起勞工退休金級距調整
 
 
 ## History
