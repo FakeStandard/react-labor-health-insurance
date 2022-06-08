@@ -1,25 +1,26 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "2022 勞健保與薪資查詢",
+  "name": "2022 勞健保與薪資查詢",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "arkrg-2di3j-001.ico",
+      "sizes": "96x96 64x64 48x48 24x24 192x192 512x512",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "arkrg-2di3j-001.ico",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "16x16"
     },
     {
-      "src": "logo512.png",
+      "src": "arkrg-2di3j-001.ico",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "32x32"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "theme_color": "#fffff",
   "background_color": "#ffffff"
 }
