@@ -274,7 +274,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
             <Form>
               <Form.Group>
                 <Row className="justify-content-center">
-                  <Col md={3}>
+                  <Col md={6} lg={3}>
                     <TextField
                       maxLength={7}
                       autoFocus
@@ -287,7 +287,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
             </Form>
           </Stack>
           <Row>
-            <Col>
+            <Col xs={12} md={6}>
               <Card className="shadow-lg rounded"
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 20, paddingRight: 0
@@ -348,7 +348,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
               </span>
             </div> */}
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <Card className="shadow-lg rounded"
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
@@ -409,7 +409,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col xs={12} md={6}>
               <Card className="shadow-lg rounded"
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
@@ -463,7 +463,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 </Card.Body>
               </Card>
             </Col>
-            <Col>
+            <Col xs={{ order: 'first' }} md={{ order: 'last' }}>
               <Card className="shadow-lg rounded"
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
@@ -518,7 +518,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
             </Col>
           </Row>
         </Container>
-      </div>
+      </div >
     );
   }
 }
