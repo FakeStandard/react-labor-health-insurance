@@ -1,6 +1,6 @@
 import React from "react";
 import "./ComparisonTable.css"
-import { Card, Table } from "react-bootstrap";
+import { Card, Col, Container, Row, Table } from "react-bootstrap";
 import { IComparisonTableProps } from "./IComparisonTableProps";
 import { IComparisonTableStates } from "./IComparisonTableStates";
 import { IHealthInfo } from "../../interface/IHealthInfo";
@@ -121,74 +121,77 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
 
     return (
       <div className="ComparisonTable">
-        <h3>
-          <span>勞健保及勞退費用對照表</span>
-        </h3>
-        <span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
+        <Container fluid>
+          <h3>
+            <span>勞健保及勞退費用對照表</span>
+          </h3>
+          <span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
 
-        <Card className="shadow-lg rounded"
-          style={{
-            marginTop: 50,
-            paddingTop: 50, paddingLeft: 50, paddingRight: 50
-          }}>
-          <Card.Body>
-            <Card.Text>
-              <Table striped hover responsive className="Table">
-                <thead className="table-success">
-                  <tr className="TableTitle">
-                    <th rowSpan={3}>等級</th>
-                    <th rowSpan={3}>投保級距</th>
-                    <th colSpan={6}>勞保</th>
-                    <th colSpan={3}>健保</th>
-                    <th rowSpan={3}>勞工退休金<br />(雇主負擔)</th>
-                    <th rowSpan={3}>備註</th>
-                  </tr>
-                  <tr className="TableTitle">
-                    <th colSpan={3}>個人</th>
-                    <th colSpan={3}>雇主</th>
-                    {/* <th colSpan={3}>政府</th> */}
-                    <th rowSpan={2}>個人</th>
-                    <th rowSpan={2}>雇主</th>
-                    <th rowSpan={2}>政府</th>
-                  </tr>
-                  <tr className="TableTitle">
-                    <th>普通事故保險費率</th>
-                    <th>就業保險費率</th>
-                    <th>合計</th>
-                    <th>普通事故保險費率</th>
-                    <th>就業保險費率</th>
-                    <th>合計</th>
-                    {/* <th>普通事故保險費率</th>
+          <Row className="justify-content-md-center">
+            <Col xs sm md lg xl={10} xxl={8}>
+              <Card className="shadow-lg rounded"
+                style={{ marginTop: 50 }}>
+                <Card.Body>
+                  <Card.Text>
+                    <Table striped hover responsive className="Table">
+                      <thead className="table-success">
+                        <tr className="TableTitle">
+                          <th rowSpan={3}>等級</th>
+                          <th rowSpan={3}>投保級距</th>
+                          <th colSpan={6}>勞保</th>
+                          <th colSpan={3}>健保</th>
+                          <th rowSpan={3}>勞工退休金<br />(雇主負擔)</th>
+                          <th rowSpan={3}>備註</th>
+                        </tr>
+                        <tr className="TableTitle">
+                          <th colSpan={3}>個人</th>
+                          <th colSpan={3}>雇主</th>
+                          {/* <th colSpan={3}>政府</th> */}
+                          <th rowSpan={2}>個人</th>
+                          <th rowSpan={2}>雇主</th>
+                          <th rowSpan={2}>政府</th>
+                        </tr>
+                        <tr className="TableTitle">
+                          <th>普通事故保險費率</th>
+                          <th>就業保險費率</th>
+                          <th>合計</th>
+                          <th>普通事故保險費率</th>
+                          <th>就業保險費率</th>
+                          <th>合計</th>
+                          {/* <th>普通事故保險費率</th>
                     <th>就業保險費率</th>
                     <th>合計</th> */}
-                  </tr>
-                </thead>
-                <tbody>
-                  {items.map((item, index) => (
-                    <tr key={index}>
-                      <td>{item.level}</td>
-                      <td>{item.insuredSalaryLevel}</td>
-                      <td>{item.personalAccident}</td>
-                      <td>{item.personalEmployment}</td>
-                      <td>{item.personalTotal}</td>
-                      <td>{item.employerAccident}</td>
-                      <td>{item.employerEmployment}</td>
-                      <td>{item.employerTotal}</td>
-                      {/* <td>{item.governmentAccident}</td> */}
-                      {/* <td>{item.governmentEmployment}</td> */}
-                      {/* <td>{item.governmentTotal}</td> */}
-                      <td>{item.personalHealth}</td>
-                      <td>{item.employerHealth}</td>
-                      <td>{item.governmentHealth}</td>
-                      <td>{item.laborPension}</td>
-                      <td>{item.remark}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
-            </Card.Text>
-          </Card.Body>
-        </Card>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {items.map((item, index) => (
+                          <tr key={index}>
+                            <td>{item.level}</td>
+                            <td>{item.insuredSalaryLevel}</td>
+                            <td>{item.personalAccident}</td>
+                            <td>{item.personalEmployment}</td>
+                            <td>{item.personalTotal}</td>
+                            <td>{item.employerAccident}</td>
+                            <td>{item.employerEmployment}</td>
+                            <td>{item.employerTotal}</td>
+                            {/* <td>{item.governmentAccident}</td> */}
+                            {/* <td>{item.governmentEmployment}</td> */}
+                            {/* <td>{item.governmentTotal}</td> */}
+                            <td>{item.personalHealth}</td>
+                            <td>{item.employerHealth}</td>
+                            <td>{item.governmentHealth}</td>
+                            <td>{item.laborPension}</td>
+                            <td>{item.remark}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </Table>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </div >
     );
   }
