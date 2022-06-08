@@ -1,4 +1,4 @@
-import { TextField } from "@fluentui/react";
+import { Stack, TextField } from "@fluentui/react";
 import React from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
 import "./Calculation.css"
@@ -270,20 +270,22 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
           </h3>
           {/* <span style={{ color: "#CC0000" }}>2022.1.1 起生效</span> */}
           <br />
-          <Form>
-            <Form.Group>
-              <Row className="justify-content-center">
-                <Col md={3}>
-                  <TextField
-                    maxLength={7}
-                    autoFocus
-                    placeholder="Please enter salary"
-                    errorMessage={errInputMsg}
-                    onChange={(e, text) => { this.changeInput(text); }} />
-                </Col>
-              </Row>
-            </Form.Group>
-          </Form>
+          <Stack styles={{ root: [{ height: 50 }] }}>
+            <Form>
+              <Form.Group>
+                <Row className="justify-content-center">
+                  <Col md={3}>
+                    <TextField
+                      maxLength={7}
+                      autoFocus
+                      placeholder="Please enter salary"
+                      errorMessage={errInputMsg}
+                      onChange={(e, text) => { this.changeInput(text); }} />
+                  </Col>
+                </Row>
+              </Form.Group>
+            </Form>
+          </Stack>
           <Row>
             <Col>
               <Card className="shadow-lg rounded"
