@@ -2,12 +2,11 @@ import { IHealthInfo } from "../../interface/IHealthInfo"
 import { ILaborInfo } from "../../interface/ILaborInfo"
 
 export interface ICalculationStates {
-    isLoaded: boolean
+    isLoaded: boolean,
+    errInputMsg: string,
     laborInfo: ILaborInfo[],
     healthInfo: IHealthInfo[],
     pensionInfo: IHealthInfo[],
-    insuredSalaryLevel: string,
-
     labor: {
         salaryLevel: number,
         personal: number,

@@ -11,10 +11,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
 
     this.state = {
       isLoaded: false,
+      errInputMsg: "",
       laborInfo: [],
       healthInfo: [],
       pensionInfo: [],
-      insuredSalaryLevel: "0", // 投保級距
       // 勞保
       labor: {
         salaryLevel: 0,
@@ -88,8 +88,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   changeInput = async (salary: any) => {
-    if (salary !== '') {
+    const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
+    if (regular.test(salary)) {
       // 勞保
+      this.setState({ errInputMsg: "" })
       await this.setLaborInfo(salary);
 
       // 健保
@@ -102,6 +104,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       await this.setStatistics(salary);
     } else {
       this.setState({
+        errInputMsg: "Invalid salary",
         labor: {
           salaryLevel: 0,
           personal: 0,
@@ -246,10 +249,6 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     const labor = this.state.labor.personal
     const health = this.state.health.personal
     const pension = this.state.pension.personal
-    console.log(salary);
-    console.log(labor);
-    console.log(health);
-    console.log(pension);
     const actualSalary = salary - labor - health - pension;
 
     this.setState({
@@ -261,7 +260,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   render(): React.ReactElement<ICalculationProps> {
-    const { labor, health, pension, statistics } = this.state;
+    const { labor, health, pension, statistics, errInputMsg } = this.state;
 
     return (
       <div className="Calculation" >
@@ -275,7 +274,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
             <Form.Group>
               <Row className="justify-content-center">
                 <Col md={3}>
-                  <TextField autoFocus placeholder="Please enter salary" onChange={(e, text) => { this.changeInput(text); }} />
+                  <TextField
+                    maxLength={7}
+                    autoFocus
+                    placeholder="Please enter salary"
+                    errorMessage={errInputMsg}
+                    onChange={(e, text) => { this.changeInput(text); }} />
                 </Col>
               </Row>
             </Form.Group>
