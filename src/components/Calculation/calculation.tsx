@@ -287,10 +287,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
             </Form>
           </Stack>
           <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} sm={6} md={6} lg={3}>
               <Card className="shadow-lg rounded"
                 style={{
-                  marginTop: 50, paddingTop: 20, paddingLeft: 20, paddingRight: 0
+                  marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
                 <Card.Body>
                   <Card.Title className="CardTitle">勞保</Card.Title>
@@ -348,10 +348,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
               </span>
             </div> */}
             </Col>
-            <Col xs={12} md={6}>
+            <Col sm={6} md={6} lg={3}>
               <Card className="shadow-lg rounded"
                 style={{
-                  marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
+                  marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
                 <Card.Body>
                   <Card.Title className="CardTitle">健保</Card.Title>
@@ -409,10 +409,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={6}>
+            <Col sm={6} md={6} lg={3}>
               <Card className="shadow-lg rounded"
                 style={{
-                  marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
+                  marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
                 <Card.Body>
                   <Card.Title className="CardTitle">勞退(6%)</Card.Title>
@@ -438,7 +438,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
               </Card>
               <Card className="shadow-lg rounded"
                 style={{
-                  marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
+                  marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
                 <Card.Body>
                   <Card.Title className="CardTitle">自提(最高6%)</Card.Title>
@@ -463,10 +463,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={{ order: 'first' }} md={{ order: 'last' }}>
+            <Col xs={{ order: 'first' }} sm={{ order: 'last' }} md={{ order: 'last' }}>
               <Card className="shadow-lg rounded"
                 style={{
-                  marginTop: 50, paddingTop: 20, paddingLeft: 10, paddingRight: 10
+                  marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
                 <Card.Body>
                   <Card.Title className="CardTitle">個人統計</Card.Title>
