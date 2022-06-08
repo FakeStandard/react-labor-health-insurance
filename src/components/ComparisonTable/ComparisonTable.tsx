@@ -128,13 +128,13 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
           <span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
 
           <Row className="justify-content-md-center">
-            <Col xs sm md lg xl={10} xxl={8}>
+            <Col xs sm md lg xl xxl={10}>
               <Card className="shadow-lg rounded"
-                style={{ marginTop: 50 }}>
+                style={{ marginTop: 50, paddingTop: 10 }}>
                 <Card.Body>
                   <Card.Text>
-                    <Table striped hover responsive className="Table">
-                      <thead className="table-success">
+                    <Table bordered  striped hover responsive className="Table">
+                      <thead>
                         <tr className="TableTitle">
                           <th rowSpan={3}>等級</th>
                           <th rowSpan={3}>投保級距</th>

@@ -44,11 +44,11 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
           <Row className="justify-content-md-center">
             <Col xs sm md lg={9} xl={8}>
               <Card className="shadow-lg rounded text-center"
-                style={{ marginTop: 50 }}>
+                style={{ marginTop: 50, paddingTop: 10 }}>
                 <Card.Body>
                   <Card.Text>
-                    <Table hover responsive>
-                      <thead className="table-success">
+                    <Table  hover responsive>
+                      <thead >
                         <tr>
                           <th>組別級距</th>
                           <th>投保等級</th>

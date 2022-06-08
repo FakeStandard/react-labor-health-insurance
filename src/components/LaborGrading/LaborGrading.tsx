@@ -43,11 +43,11 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
           <Row className="justify-content-md-center">
             <Col xs sm md={10} lg={7} xl={6}>
               <Card className="shadow-lg rounded"
-                style={{ marginTop: 50 }}>
+                style={{ marginTop: 50, paddingTop: 10 }}>
                 <Card.Body>
                   <Card.Text>
-                    <Table striped hover responsive>
-                      <thead className="table-success">
+                    <Table hover responsive>
+                      <thead>
                         <tr>
                           <th>投保薪資等級</th>
                           <th>月薪資總額(元)</th>
