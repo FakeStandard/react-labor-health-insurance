@@ -20,7 +20,8 @@
 | 2022/06/06 | Add Page - 勞保投保薪資分級表         |
 | 2022/06/07 | Add Page - 勞健保及勞退費用對照表     |
 | 2022/06/08 | Add Page - 薪資即時試算               |
-+
+| 2022/06/10 | 添加健保扶養眷屬試算                  |
+
 ## Product
 [Labor Health Insurance](https://fakestandard.github.io/react-labor-health-insurance)
 
