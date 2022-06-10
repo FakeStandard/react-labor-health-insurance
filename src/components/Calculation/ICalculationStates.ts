@@ -3,7 +3,7 @@ import { ILaborInfo } from "../../interface/ILaborInfo"
 
 export interface ICalculationStates {
     isLoaded: boolean,
-    errInputMsg: string,
+    errInput: boolean,
     laborInfo: ILaborInfo[],
     healthInfo: IHealthInfo[],
     pensionInfo: IHealthInfo[],
@@ -20,6 +20,7 @@ export interface ICalculationStates {
         personal: number,
         employer: number,
         government: number,
+        dependents: number,
         total: number,
     },
 

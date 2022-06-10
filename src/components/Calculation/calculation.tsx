@@ -1,6 +1,6 @@
-import { Stack, TextField } from "@fluentui/react";
+import { SpinButton, Stack, TextField } from "@fluentui/react";
 import React from "react";
-import { Card, Col, Container, Form, Row } from "react-bootstrap";
+import { Card, Col, Container, Dropdown, FloatingLabel, Form, Row } from "react-bootstrap";
 import "./Calculation.css"
 import { ICalculationProps } from "./ICalculationProps";
 import { ICalculationStates } from "./ICalculationStates";
@@ -11,7 +11,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
 
     this.state = {
       isLoaded: false,
-      errInputMsg: "",
+      errInput: false,
       laborInfo: [],
       healthInfo: [],
       pensionInfo: [],
@@ -29,6 +29,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
         personal: 0,
         employer: 0,
         government: 0,
+        dependents: 0,
         total: 0
       },
       // 勞退 & 自提
@@ -47,7 +48,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     this.getData();
   }
 
-  componentDidMount = async () => {
+  componentDidMount() {
     // componentDidMount
   }
 
@@ -87,11 +88,14 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       .finally(() => this.setState({ isLoaded: true }))
   }
 
-  changeInput = async (salary: any) => {
+  changeInput = async (e: any) => {
+    const salary = e.target.value;
     const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
+
     if (regular.test(salary)) {
+      this.setState({ errInput: false })
+
       // 勞保
-      this.setState({ errInputMsg: "" })
       await this.setLaborInfo(salary);
 
       // 健保
@@ -103,8 +107,8 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       // 統計
       await this.setStatistics(salary);
     } else {
+      this.setState({ errInput: true })
       this.setState({
-        errInputMsg: "Invalid salary",
         labor: {
           salaryLevel: 0,
           personal: 0,
@@ -112,12 +116,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
           government: 0,
           total: 0,
         },
-
         health: {
           salaryLevel: 0,
           personal: 0,
           employer: 0,
           government: 0,
+          dependents: 0,
           total: 0,
         },
 
@@ -133,6 +137,39 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
         }
       })
     }
+  }
+
+  changeSelect = async (e: any) => {
+    const value = e.target.value;
+    const health = this.state.health;
+
+    const num = Number(value) > 3 ? 4 : Number(value) + 1
+    const single = Math.round(health.salaryLevel * 5.17 / 100 * 0.3)
+    const sum = num * single
+
+    this.setState({
+      health: {
+        salaryLevel: health.salaryLevel,
+        personal: sum,
+        employer: health.employer,
+        government: health.government,
+        dependents: Number(value),
+        total: health.employer + health.government + sum
+      }
+    })
+
+    const salary = this.state.statistics.basicSalary
+
+    const labor = this.state.labor.personal
+    const pension = this.state.pension.personal
+    const actualSalary = salary - labor - sum - pension;
+
+    this.setState({
+      statistics: {
+        basicSalary: salary,
+        actualSalary: actualSalary
+      }
+    })
   }
 
   // 設置勞保資訊
@@ -194,9 +231,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     // 計算
     // 投保金額 * 保險費率（5.17%）* 負擔比率（小數點後先四捨五入）* (本人+眷屬人數)
     // 自109年1月1日起調整平均眷口數為0.58人，投保單位及政府負擔金額含本人及平均眷屬人數0.58人，合計1.58人。
-    personal = Math.round(level * 5.17 / 100 * 0.3)
+    const dependents = this.state.health.dependents
+
+    personal = Math.round(level * 5.17 / 100 * 0.3) * (dependents + 1)
     employer = Math.round(level * 5.17 / 100 * 0.6 * 1.58)
     government = Math.round(level * 5.17 / 100 * 0.1 * 1.58)
+
 
     this.setState({
       health: {
@@ -204,6 +244,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
         personal: personal,
         employer: employer,
         government: government,
+        dependents: dependents,
         total: personal + employer + government
       }
     })
@@ -260,7 +301,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   render(): React.ReactElement<ICalculationProps> {
-    const { labor, health, pension, statistics, errInputMsg } = this.state;
+    const { labor, health, pension, statistics, errInput } = this.state;
 
     return (
       <div className="Calculation" >
@@ -268,25 +309,24 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
           <h3>
             <span>薪資即時試算</span>
           </h3>
-          {/* <span style={{ color: "#CC0000" }}>2022.1.1 起生效</span> */}
           <br />
           <Stack styles={{ root: [{ height: 50 }] }}>
-            <Form>
-              <Form.Group>
-                <Row className="justify-content-center">
-                  <Col md={6} lg={3}>
-                    <TextField
-                      maxLength={7}
-                      autoFocus
-                      placeholder="Please enter salary"
-                      errorMessage={errInputMsg}
-                      onChange={(e, text) => { this.changeInput(text); }} />
-                  </Col>
-                </Row>
-              </Form.Group>
-            </Form>
+            <Row className="justify-content-center">
+              <Col md={6} lg={3}>
+                <Form.Control
+                  type="text"
+                  placeholder="Please enter salary"
+                  isInvalid={errInput}
+                  onChange={(event: any) => { this.changeInput(event); }}
+                />
+                <Form.Control.Feedback type="invalid">
+                  Invalid salary
+                </Form.Control.Feedback>
+              </Col>
+            </Row>
           </Stack>
           <Row>
+            {/* 勞保 */}
             <Col xs={12} sm={6} md={6} lg={3}>
               <Card className="shadow-lg rounded"
                 style={{
@@ -348,6 +388,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
               </span>
             </div> */}
             </Col>
+            {/* 健保 */}
             <Col sm={6} md={6} lg={3}>
               <Card className="shadow-lg rounded"
                 style={{
@@ -385,7 +426,15 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                         <p>扶養眷屬</p>
                       </div>
                       <div className="col">
-                        <p>0</p>
+                        <Form.Select
+                          className="text-center text-md-right"
+                          value={health.dependents}
+                          defaultValue={0} onChange={(event: any) => { this.changeSelect(event); }}>
+                          <option value={0}>0</option>
+                          <option value={1}>1</option>
+                          <option value={2}>2</option>
+                          <option value={3}>3人以上(包含)</option>
+                        </Form.Select>
                       </div>
                     </div>
                     <div className="row">
@@ -410,6 +459,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
               </Card>
             </Col>
             <Col sm={6} md={6} lg={3}>
+              {/* 勞退 */}
               <Card className="shadow-lg rounded"
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
@@ -436,6 +486,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                   </Card.Text>
                 </Card.Body>
               </Card>
+              {/* 自提 */}
               <Card className="shadow-lg rounded"
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
@@ -463,6 +514,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 </Card.Body>
               </Card>
             </Col>
+            {/* 個人統計 */}
             <Col xs={{ order: 'first' }} sm={{ order: 'last' }} md={{ order: 'last' }}>
               <Card className="shadow-lg rounded"
                 style={{
@@ -517,7 +569,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
               </Card>
             </Col>
           </Row>
-        </Container>
+        </Container >
       </div >
     );
   }
