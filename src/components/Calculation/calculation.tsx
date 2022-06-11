@@ -94,7 +94,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     const salary = e.target.value;
     const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
 
-    if (regular.test(salary)) {
+    if (salary !== "0" && regular.test(salary)) {
       this.setState({ errInput: false })
 
       // 勞保
@@ -109,7 +109,6 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       // 統計
       await this.setStatistics(salary);
     } else {
-      this.setState({ errInput: true })
       this.setState({
         labor: {
           salaryLevel: 0,
@@ -138,6 +137,13 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
           actualSalary: 0,
         }
       })
+
+      if (salary == "0") {
+        this.setState({ errInput: false })
+        return
+      }
+
+      this.setState({ errInput: true })
     }
   }
 
@@ -183,7 +189,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     await this.setState({ pensionCheck: checked })
 
     // recalculate
-    if (regular.test(String(level))) {
+    if (level !== 0 && regular.test(String(level))) {
       await this.setPension(salary);
       await this.setStatistics(salary);
     }
@@ -198,7 +204,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     this.setState({ pensionSelect: item })
 
     // recalculate
-    if (regular.test(String(level))) {
+    if (level !== 0 && regular.test(String(level))) {
       const personal = Math.round(level * (Number(item) + 1) / 100);
       const employer = this.state.pension.employer;
 
@@ -352,8 +358,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   render(): React.ReactElement<ICalculationProps> {
-    const { labor, health, pension, statistics,
-      errInput, pensionCheck, pensionSelect } = this.state;
+    const {
+      labor, health, pension, statistics,
+      errInput, pensionCheck, pensionSelect
+    } = this.state;
 
     return (
       <div className="Calculation" >
