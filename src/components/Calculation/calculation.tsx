@@ -13,7 +13,8 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       isLoaded: false,
       errInput: false,
       pensionCheck: false,
-      pensionSelect: 0,
+      pensionSelect: 5,
+      pensionLabel: '6%',
       laborInfo: [],
       healthInfo: [],
       pensionInfo: [],
@@ -200,7 +201,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     const salary = this.state.statistics.basicSalary
     const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
 
-    this.setState({ pensionSelect: item })
+    this.setState({ pensionSelect: item, pensionLabel: e.target[item].label })
 
     // recalculate
     if (level !== 0 && regular.test(String(level))) {
@@ -359,7 +360,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   render(): React.ReactElement<ICalculationProps> {
     const {
       labor, health, pension, statistics,
-      errInput, pensionCheck, pensionSelect
+      errInput, pensionCheck, pensionSelect, pensionLabel
     } = this.state;
 
     const separatorStyle = {
@@ -563,7 +564,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                     <Col>{health.personal}</Col>
                   </Row>
                   <Row className="mb-3">
-                    <Col className="fontRed">- 自提 6%</Col>
+                    <Col className="fontRed">- 自提 {pensionLabel}</Col>
                     <Col>{pension.personal}</Col>
                   </Row>
                   <Separator styles={separatorStyle} />

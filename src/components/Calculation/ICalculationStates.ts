@@ -6,6 +6,7 @@ export interface ICalculationStates {
     errInput: boolean,
     pensionCheck: boolean,
     pensionSelect: number,
+    pensionLabel: string,
     laborInfo: ILaborInfo[],
     healthInfo: IHealthInfo[],
     pensionInfo: IHealthInfo[],
