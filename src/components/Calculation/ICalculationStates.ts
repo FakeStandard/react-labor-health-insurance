@@ -4,6 +4,8 @@ import { ILaborInfo } from "../../interface/ILaborInfo"
 export interface ICalculationStates {
     isLoaded: boolean,
     errInput: boolean,
+    pensionCheck: boolean,
+    pensionSelect: number,
     laborInfo: ILaborInfo[],
     healthInfo: IHealthInfo[],
     pensionInfo: IHealthInfo[],

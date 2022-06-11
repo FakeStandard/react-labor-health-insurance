@@ -12,6 +12,8 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     this.state = {
       isLoaded: false,
       errInput: false,
+      pensionCheck: false,
+      pensionSelect: 0,
       laborInfo: [],
       healthInfo: [],
       pensionInfo: [],
@@ -172,6 +174,55 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     })
   }
 
+  changePensionCheck = async (e: any) => {
+    const checked = e.target.checked;
+    const level = this.state.pension.salaryLevel
+    const salary = this.state.statistics.basicSalary
+    const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
+
+    await this.setState({ pensionCheck: checked })
+
+    // recalculate
+    if (regular.test(String(level))) {
+      await this.setPension(salary);
+      await this.setStatistics(salary);
+    }
+  }
+
+  changePensionSelect = async (e: any) => {
+    const item = e.target.value;
+    const level = this.state.pension.salaryLevel
+    const salary = this.state.statistics.basicSalary
+    const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
+
+    this.setState({ pensionSelect: item })
+
+    // recalculate
+    if (regular.test(String(level))) {
+      const personal = Math.round(level * (Number(item) + 1) / 100);
+      const employer = this.state.pension.employer;
+
+      this.setState({
+        pension: {
+          salaryLevel: level,
+          personal: personal,
+          employer: employer,
+        }
+      })
+
+      const labor = this.state.labor.personal
+      const health = this.state.health.personal
+      const actualSalary = salary - labor - health - personal;
+
+      this.setState({
+        statistics: {
+          basicSalary: salary,
+          actualSalary: actualSalary
+        }
+      })
+    }
+  }
+
   // 設置勞保資訊
   setLaborInfo = (salary: any) => {
     const laborInfo = this.state.laborInfo;
@@ -251,7 +302,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   // 設置勞退資訊
-  setPension = (salary: any) => {
+  setPension = async (salary: any) => {
     let pensionInfo = this.state.pensionInfo;
     let personal = 0;
     let employer = 0;
@@ -272,10 +323,10 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     // 計算
     // 投保金額 * 保險費率（5.17%）* 負擔比率（小數點後先四捨五入）* (本人+眷屬人數)
     // 自109年1月1日起調整平均眷口數為0.58人，投保單位及政府負擔金額含本人及平均眷屬人數0.58人，合計1.58人。
-    personal = Math.round(level * 0.06)
+    personal = this.state.pensionCheck ? Math.round(level * (Number(this.state.pensionSelect) + 1) / 100) : 0
     employer = Math.round(level * 0.06)
 
-    this.setState({
+    await this.setState({
       pension: {
         salaryLevel: level,
         personal: personal,
@@ -286,13 +337,13 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   // 設置個人統計
-  setStatistics = (salary: any) => {
+  setStatistics = async (salary: any) => {
     const labor = this.state.labor.personal
     const health = this.state.health.personal
-    const pension = this.state.pension.personal
+    const pension = this.state.pension.personal;
     const actualSalary = salary - labor - health - pension;
 
-    this.setState({
+    await this.setState({
       statistics: {
         basicSalary: salary,
         actualSalary: actualSalary
@@ -301,7 +352,8 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   }
 
   render(): React.ReactElement<ICalculationProps> {
-    const { labor, health, pension, statistics, errInput } = this.state;
+    const { labor, health, pension, statistics,
+      errInput, pensionCheck, pensionSelect } = this.state;
 
     return (
       <div className="Calculation" >
@@ -310,7 +362,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
             <span>薪資即時試算</span>
           </h3>
           <br />
-          <Stack styles={{ root: [{ height: 50 }] }}>
+          <Stack styles={{ root: [{ height: 70 }] }}>
             <Row className="justify-content-center">
               <Col md={6} lg={3}>
                 <Form.Control
@@ -322,6 +374,30 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 <Form.Control.Feedback type="invalid">
                   Invalid salary
                 </Form.Control.Feedback>
+              </Col>
+            </Row>
+          </Stack>
+          <Stack>
+            <Row className="justify-content-center">
+              <Col xs={3} sm={2} md={2} lg={2} xl={1}>
+                <Form.Check
+                  type={'checkbox'}
+                  id={`default-checkbox`}
+                  label={`自提`}
+                  checked={pensionCheck}
+                  onChange={(event: any) => { this.changePensionCheck(event); }}
+                />
+              </Col>
+              <Col xs={3} sm={3} md={2} lg={2} xl={1}>
+                <Form.Select size="sm"
+                  className="text-center text-md-right"
+                  value={pensionSelect}
+                  disabled={!pensionCheck}
+                  onChange={(event: any) => { this.changePensionSelect(event); }}>
+                  {[0, 1, 2, 3, 4, 5].map(c => (
+                    <option value={c}>{`${c + 1}%`}</option>
+                  ))}
+                </Form.Select>
               </Col>
             </Row>
           </Stack>
@@ -429,7 +505,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                         <Form.Select
                           className="text-center text-md-right"
                           value={health.dependents}
-                          defaultValue={0} onChange={(event: any) => { this.changeSelect(event); }}>
+                          onChange={(event: any) => { this.changeSelect(event); }}>
                           <option value={0}>0</option>
                           <option value={1}>1</option>
                           <option value={2}>2</option>
