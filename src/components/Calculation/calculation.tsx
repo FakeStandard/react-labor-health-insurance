@@ -1,6 +1,6 @@
-import { SpinButton, Stack, TextField } from "@fluentui/react";
+import { Label, Separator, Stack, Text } from "@fluentui/react";
 import React from "react";
-import { Card, Col, Container, Dropdown, FloatingLabel, Form, Row } from "react-bootstrap";
+import { Card, Col, Container, Row, Form } from "react-bootstrap";
 import "./Calculation.css"
 import { ICalculationProps } from "./ICalculationProps";
 import { ICalculationStates } from "./ICalculationStates";
@@ -46,12 +46,11 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
         actualSalary: 0,
       }
     }
-
-    this.getData();
   }
 
   componentDidMount() {
     // componentDidMount
+    this.getData();
   }
 
   componentWillUnmount() {
@@ -363,6 +362,17 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       errInput, pensionCheck, pensionSelect
     } = this.state;
 
+    const separatorStyle = {
+      root: [{
+        // add selectors here
+        selectors: {
+          '::before': {
+            background: '#d2d0ce',
+          },
+        }
+      }]
+    }
+
     return (
       <div className="Calculation" >
         <Container fluid>
@@ -403,7 +413,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                   disabled={!pensionCheck}
                   onChange={(event: any) => { this.changePensionSelect(event); }}>
                   {[0, 1, 2, 3, 4, 5].map(c => (
-                    <option value={c}>{`${c + 1}%`}</option>
+                    <option key={c} value={c}>{`${c + 1}%`}</option>
                   ))}
                 </Form.Select>
               </Col>
@@ -416,51 +426,29 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
-                <Card.Body>
+                <Card.Body className="CardText">
                   <Card.Title className="CardTitle">勞保</Card.Title>
-                  <Card.Text className="CardText">
-                    <div className="row">
-                      <div className="col">
-                        <p>投保級距</p>
-                      </div>
-                      <div className="col">
-                        <p>{labor.salaryLevel}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p>政府負擔 10%</p>
-                      </div>
-                      <div className="col">
-                        <p>{labor.government}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p>雇主負擔 70%</p>
-                      </div>
-                      <div className="col">
-                        <p>{labor.employer}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontRed">個人負擔 20%</p>
-                      </div>
-                      <div className="col">
-                        <p>{labor.personal}</p>
-                      </div>
-                    </div>
-                    <hr />
-                    <div className="row">
-                      <div className="col">
-                        <p>合計</p>
-                      </div>
-                      <div className="col">
-                        <p>{labor.total}</p>
-                      </div>
-                    </div>
-                  </Card.Text>
+                  <Row className="mb-3">
+                    <Col>投保級距</Col>
+                    <Col>{labor.salaryLevel}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col>政府負擔 10%</Col>
+                    <Col>{labor.government}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col>雇主負擔 70%</Col>
+                    <Col>{labor.employer}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="fontRed">個人負擔 20%</Col>
+                    <Col>{labor.personal}</Col>
+                  </Row>
+                  <Separator styles={separatorStyle} />
+                  <Row className="mb-3">
+                    <Col>合計</Col>
+                    <Col>{labor.total}</Col>
+                  </Row>
                 </Card.Body>
               </Card>
               {/* <div className="row">
@@ -478,67 +466,43 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
-                <Card.Body>
+                <Card.Body className="CardText">
                   <Card.Title className="CardTitle">健保</Card.Title>
-                  <Card.Text className="CardText">
-                    <div className="row">
-                      <div className="col">
-                        <p>投保級距</p>
-                      </div>
-                      <div className="col">
-                        <p>{health.salaryLevel}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p>政府負擔 10%</p>
-                      </div>
-                      <div className="col">
-                        <p>{health.government}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p>雇主負擔 60%</p>
-                      </div>
-                      <div className="col">
-                        <p>{health.employer}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p>扶養眷屬</p>
-                      </div>
-                      <div className="col">
-                        <Form.Select
-                          className="text-center text-md-right"
-                          value={health.dependents}
-                          onChange={(event: any) => { this.changeSelect(event); }}>
-                          <option value={0}>0</option>
-                          <option value={1}>1</option>
-                          <option value={2}>2</option>
-                          <option value={3}>3人以上(包含)</option>
-                        </Form.Select>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontRed">個人負擔 30%</p>
-                      </div>
-                      <div className="col">
-                        <p>{health.personal}</p>
-                      </div>
-                    </div>
-                    <hr />
-                    <div className="row">
-                      <div className="col">
-                        <p>合計</p>
-                      </div>
-                      <div className="col">
-                        <p>{health.total}</p>
-                      </div>
-                    </div>
-                  </Card.Text>
+                  <Row className="mb-3">
+                    <Col>投保級距</Col>
+                    <Col>{health.salaryLevel}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col>政府負擔 10%</Col>
+                    <Col>{health.government}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col>雇主負擔 60%</Col>
+                    <Col>{health.employer}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col>扶養眷屬</Col>
+                    <Col>
+                      <Form.Select
+                        className="text-center text-md-right"
+                        value={health.dependents}
+                        onChange={(event: any) => { this.changeSelect(event); }}>
+                        <option value={0}>0</option>
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3人以上(包含)</option>
+                      </Form.Select>
+                    </Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="fontRed">個人負擔 30%</Col>
+                    <Col>{health.personal}</Col>
+                  </Row>
+                  <Separator styles={separatorStyle} />
+                  <Row className="mb-3">
+                    <Col>合計</Col>
+                    <Col>{health.total}</Col>
+                  </Row>
                 </Card.Body>
               </Card>
             </Col>
@@ -548,26 +512,16 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
-                <Card.Body>
+                <Card.Body className="CardText">
                   <Card.Title className="CardTitle">勞退(6%)</Card.Title>
-                  <Card.Text className="CardText">
-                    <div className="row">
-                      <div className="col">
-                        <p>投保級距</p>
-                      </div>
-                      <div className="col">
-                        <p>{pension.salaryLevel}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p>雇主負擔</p>
-                      </div>
-                      <div className="col">
-                        <p>{pension.employer}</p>
-                      </div>
-                    </div>
-                  </Card.Text>
+                  <Row className="mb-3">
+                    <Col>投保級距</Col>
+                    <Col>{pension.salaryLevel}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col>雇主負擔</Col>
+                    <Col>{pension.employer}</Col>
+                  </Row>
                 </Card.Body>
               </Card>
               {/* 自提 */}
@@ -575,26 +529,16 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
-                <Card.Body>
+                <Card.Body className="CardText">
                   <Card.Title className="CardTitle">自提(最高6%)</Card.Title>
-                  <Card.Text className="CardText">
-                    <div className="row">
-                      <div className="col">
-                        <p>投保級距</p>
-                      </div>
-                      <div className="col">
-                        <p>{pension.salaryLevel}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontRed">個人負擔</p>
-                      </div>
-                      <div className="col">
-                        <p>{pension.personal}</p>
-                      </div>
-                    </div>
-                  </Card.Text>
+                  <Row className="mb-3">
+                    <Col>投保級距</Col>
+                    <Col>{pension.salaryLevel}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="fontRed">個人負擔</Col>
+                    <Col>{pension.personal}</Col>
+                  </Row>
                 </Card.Body>
               </Card>
             </Col>
@@ -604,51 +548,29 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                 style={{
                   marginTop: 50, paddingTop: 20, paddingLeft: 10
                 }}>
-                <Card.Body>
+                <Card.Body className="CardText">
                   <Card.Title className="CardTitle">個人統計</Card.Title>
-                  <Card.Text className="CardText">
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontGreen">本薪</p>
-                      </div>
-                      <div className="col">
-                        <p>{statistics.basicSalary}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontRed">- 勞保負擔</p>
-                      </div>
-                      <div className="col">
-                        <p>{labor.personal}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontRed">- 健保負擔</p>
-                      </div>
-                      <div className="col">
-                        <p>{health.personal}</p>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontRed">- 自提 6%</p>
-                      </div>
-                      <div className="col">
-                        <p>{pension.personal}</p>
-                      </div>
-                    </div>
-                    <hr />
-                    <div className="row">
-                      <div className="col">
-                        <p className="fontGreen">實領薪資</p>
-                      </div>
-                      <div className="col">
-                        <p>{statistics.actualSalary}</p>
-                      </div>
-                    </div>
-                  </Card.Text>
+                  <Row className="mb-3">
+                    <Col className="fontGreen">本薪</Col>
+                    <Col>{statistics.basicSalary}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="fontRed">- 勞保負擔</Col>
+                    <Col>{labor.personal}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="fontRed">- 健保負擔</Col>
+                    <Col>{health.personal}</Col>
+                  </Row>
+                  <Row className="mb-3">
+                    <Col className="fontRed">- 自提 6%</Col>
+                    <Col>{pension.personal}</Col>
+                  </Row>
+                  <Separator styles={separatorStyle} />
+                  <Row className="mb-3">
+                    <Col className="fontGreen">實領薪資</Col>
+                    <Col>{statistics.actualSalary}</Col>
+                  </Row>
                 </Card.Body>
               </Card>
             </Col>
