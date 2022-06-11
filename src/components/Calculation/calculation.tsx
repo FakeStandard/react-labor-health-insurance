@@ -382,7 +382,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
           <br />
           <Stack styles={{ root: [{ height: 70 }] }}>
             <Row className="justify-content-center">
-              <Col md={6} lg={3}>
+              <Col xs={10} sm={8} md={6} lg={4}>
                 <Form.Control
                   type="text"
                   placeholder="Please enter salary"
@@ -397,7 +397,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
           </Stack>
           <Stack>
             <Row className="justify-content-center">
-              <Col xs={3} sm={2} md={2} lg={2} xl={1}>
+              <Col xs={3} sm={2} md={2} lg={1} xl={1}>
                 <Form.Check
                   type={'checkbox'}
                   id={`default-checkbox`}
@@ -406,7 +406,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                   onChange={(event: any) => { this.changePensionCheck(event); }}
                 />
               </Col>
-              <Col xs={3} sm={3} md={2} lg={2} xl={1}>
+              <Col xs={3} sm={3} md={2} lg={1} xl={1}>
                 <Form.Select size="sm"
                   className="text-center text-md-right"
                   value={pensionSelect}
@@ -568,7 +568,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
                   </Row>
                   <Separator styles={separatorStyle} />
                   <Row className="mb-3">
-                    <Col className="fontGreen">實領薪資</Col>
+                    <Col className="fontGreen">+ 實領薪資</Col>
                     <Col>{statistics.actualSalary}</Col>
                   </Row>
                 </Card.Body>
