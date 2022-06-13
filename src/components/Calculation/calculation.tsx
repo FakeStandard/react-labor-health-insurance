@@ -186,7 +186,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     const salary = this.state.statistics.basicSalary
     const regular = /^(([1-9]{1}\d*)|(0{1}))(\.\d{0,2})?$/;
 
-    await this.setState({ pensionCheck: checked })
+    this.setState({ pensionCheck: checked })
 
     // recalculate
     if (level !== 0 && regular.test(String(level))) {
@@ -205,27 +205,8 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
 
     // recalculate
     if (level !== 0 && regular.test(String(level))) {
-      const personal = Math.round(level * (Number(item) + 1) / 100);
-      const employer = this.state.pension.employer;
-
-      this.setState({
-        pension: {
-          salaryLevel: level,
-          personal: personal,
-          employer: employer,
-        }
-      })
-
-      const labor = this.state.labor.personal
-      const health = this.state.health.personal
-      const actualSalary = salary - labor - health - personal;
-
-      this.setState({
-        statistics: {
-          basicSalary: salary,
-          actualSalary: actualSalary
-        }
-      })
+      await this.setPension(salary);
+      await this.setStatistics(salary);
     }
   }
 
@@ -310,8 +291,6 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   // 設置勞退資訊
   setPension = async (salary: any) => {
     let pensionInfo = this.state.pensionInfo;
-    let personal = 0;
-    let employer = 0;
 
     // 預設為最高級距
     let level = Number(pensionInfo[pensionInfo.length - 1].InsuredSalaryLevel.replace(",", ""));
@@ -329,32 +308,23 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     // 計算
     // 投保金額 * 保險費率（5.17%）* 負擔比率（小數點後先四捨五入）* (本人+眷屬人數)
     // 自109年1月1日起調整平均眷口數為0.58人，投保單位及政府負擔金額含本人及平均眷屬人數0.58人，合計1.58人。
-    personal = this.state.pensionCheck ? Math.round(level * (Number(this.state.pensionSelect) + 1) / 100) : 0
-    employer = Math.round(level * 0.06)
-
-    await this.setState({
+    this.setState((state) => ({
       pension: {
         salaryLevel: level,
-        personal: personal,
-        employer: employer,
+        personal: state.pensionCheck ? Math.round(level * (Number(state.pensionSelect) + 1) / 100) : 0,
+        employer: Math.round(level * 0.06),
       }
-    })
-
+    }))
   }
 
   // 設置個人統計
   setStatistics = async (salary: any) => {
-    const labor = this.state.labor.personal
-    const health = this.state.health.personal
-    const pension = this.state.pension.personal;
-    const actualSalary = salary - labor - health - pension;
-
-    await this.setState({
+    this.setState((state) => ({
       statistics: {
         basicSalary: salary,
-        actualSalary: actualSalary
+        actualSalary: salary - state.labor.personal - state.health.personal - state.pension.personal
       }
-    })
+    }))
   }
 
   render(): React.ReactElement<ICalculationProps> {
