@@ -27,9 +27,20 @@
 ## Product
 [Labor Health Insurance](https://fakestandard.github.io/react-labor-health-insurance)
 
-### Open Data
+## Open Data
+### 投保薪資分級表
 [勞保投保薪資分級表](https://data.gov.tw/dataset/6258)
 
 [全民健康保險投保金額分級表](https://data.gov.tw/dataset/20251)
 
 [勞工退休金月提繳分級表](https://data.gov.tw/dataset/6274)
+
+### 全民健康保險保險費負擔金額表
+[公、民營事業、機構及有一定雇主之受僱者健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=281&Mid=A110689)
+
+[公務人員、公職人員、志願役軍人健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=279&Mid=A110689)
+
+[私立學校教職員健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=280&Mid=A110689)
+[雇主、自營業主、專門職業及技術人員自行執業者健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=283&Mid=A110689)
+[農會、漁會、水利會會員健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=284&Mid=A110689)
+[職業工會會員健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=282&Mid=A110689)
