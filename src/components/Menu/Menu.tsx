@@ -1,10 +1,11 @@
 import React from "react";
-import { Container, Nav, Navbar, NavbarBrand, NavDropdown, NavLink } from "react-bootstrap";
+import { Badge, Container, Nav, Navbar, NavbarBrand, NavDropdown, NavLink } from "react-bootstrap";
 import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
+import HealthPremiumNormal from "../HealthPremium/Normal/HealthPremiumNormal";
 import Home from "../Home/Home";
 import LaborGrading from "../LaborGrading/LaborGrading";
 import PensionGrading from "../PensionGrading/PensionGrading";
@@ -16,7 +17,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "5",
+      selectKey: "6",
     }
   }
 
@@ -49,7 +50,15 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={4}>全民健康保險投保金額分級表</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey={5}>勞工退休金月提繳工資分級表</NavDropdown.Item>
+                  <NavDropdown.Item eventKey={5}>勞工退休金月提繳工資分級表
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="全民健康保險保險費負擔金額表">
+                  <NavDropdown.Item eventKey={6}>公、民營事業、機構及有一定雇主之受僱者
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
                 </NavDropdown>
               </Nav>
             </NavbarCollapse>
@@ -84,6 +93,10 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
         {/* 勞工退休金月提繳工資分級表 */}
         {(selectKey === "5") &&
           (<PensionGrading />)}
+
+        {/* 全民健康保險保險費負擔金額表 */}
+        {(selectKey === "6") &&
+          (<HealthPremiumNormal />)}
       </div>
     );
   }
