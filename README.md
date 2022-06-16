@@ -23,7 +23,7 @@
 | 2022/06/10 | 薪資計算 - 添加健保扶養眷屬試算功能                    |
 | 2022/06/11 | 薪資計算 - 添加自提勞退試算功能                        |
 | 2022/06/16 | Add Page - 勞工退休金月提繳工資分級表                  |
-| 2022/06/17 | Add Page - 健保-公、民營事業、機構及有一定雇主之受僱者 |
+| 2022/06/17 | Add Page - 健保負擔-公、民營事業、機構及有一定雇主之受僱者 |
 
 ## Product
 [Labor Health Insurance](https://fakestandard.github.io/react-labor-health-insurance)
