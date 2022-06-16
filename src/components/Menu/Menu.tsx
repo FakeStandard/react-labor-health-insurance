@@ -5,8 +5,9 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
-import Index from "../Index/Index";
+import Home from "../Home/Home";
 import LaborGrading from "../LaborGrading/LaborGrading";
+import PensionGrading from "../PensionGrading/PensionGrading";
 import { IMenuProps } from "./IMenuProps";
 import { IMenuStates } from "./IMenuStates";
 
@@ -15,7 +16,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "1",
+      selectKey: "5",
     }
   }
 
@@ -41,20 +42,23 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
             <NavbarCollapse id="menu-navbar">
               <Nav>
                 <NavLink eventKey={1}>薪資即時試算</NavLink>
-                <NavLink eventKey={2}>勞健保及勞退費用對照表</NavLink>
+                {/* <NavLink eventKey={2}>勞健保及勞退費用對照表</NavLink> */}
+                <NavLink eventKey={2}>勞健保保費及勞退提繳三合一費用對照表</NavLink>
                 <NavDropdown title="投保薪資分級表">
                   <NavDropdown.Item eventKey={3}>勞工保險投保分級表</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={4}>全民健康保險投保金額分級表</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item eventKey={5}>勞工退休金月提繳工資分級表</NavDropdown.Item>
                 </NavDropdown>
               </Nav>
             </NavbarCollapse>
           </Container>
         </Navbar>
 
-        {/* 薪資即時試算 */}
+        {/* 首頁 */}
         {(selectKey === "0") && (
-          <Index />
+          <Home />
         )}
 
         {/* 薪資即時試算 */}
@@ -62,7 +66,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
           <Calculation />
         )}
 
-        {/* 勞健保及勞退費用對照表 */}
+        {/* 勞健保保費及勞退提繳三合一費用對照表 */}
         {(selectKey === "2") && (
           <ComparisonTable />
         )}
@@ -72,10 +76,14 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
           <LaborGrading />
         )}
 
-        {/* 全民健康保險投保分級表 */}
+        {/* 全民健康保險投保金額分級表 */}
         {(selectKey === "4") && (
           <HealthGrading />
         )}
+
+        {/* 勞工退休金月提繳工資分級表 */}
+        {(selectKey === "5") &&
+          (<PensionGrading />)}
       </div>
     );
   }

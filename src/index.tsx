@@ -4,7 +4,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './components/Menu/Menu'
-import { registerIcons } from '@fluentui/react';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

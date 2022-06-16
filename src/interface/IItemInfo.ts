@@ -1,6 +1,5 @@
 export interface IItemInfo {
     level: string; // 投保等級
-    // Distance: string; // 組別級距
     insuredSalaryLevel: string; // 月投保金額
 
     // 勞保-個人

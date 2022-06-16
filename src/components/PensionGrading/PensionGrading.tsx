@@ -1,12 +1,12 @@
 import React from "react";
-import "./LaborGrading.css"
+import { IPensionGradingProps } from "./IPensionGradingProps";
+import { IPensionGradingStates } from "./IPensionGradingStates";
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import { ILaborGradingProps } from "./ILaborGradingProps";
-import { ILaborGradingStates } from "./ILaborGradingStates";
+import "./PensionGrading.css";
 
-export default class LaborGrading extends React.Component<ILaborGradingProps, ILaborGradingStates>{
-  constructor(props: ILaborGradingProps) {
-    super(props);
+export default class PensionGrading extends React.Component<IPensionGradingProps, IPensionGradingStates>{
+  constructor(props: IPensionGradingProps) {
+    super(props)
 
     this.state = {
       isLoaded: false,
@@ -14,30 +14,29 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
     }
   }
 
-  componentDidMount = async () => {
-    // get json data
-    await fetch("json/labor-grading.json")
+  async componentDidMount() {
+    await fetch("json/pension-grading.json")
       .then(res => res.json())
       .then(res => {
-        // console.log(res.normal);
-        this.setState({ items: res.normal });
+        console.log(res)
+        this.setState({ items: res })
       })
       .catch((err) => console.log(err))
       .finally(() => this.setState({ isLoaded: true }))
   }
 
   componentWillUnmount() {
-    // componentWillUnmount
+
   }
 
-  render(): React.ReactElement<ILaborGradingProps> {
-    const { items } = this.state;
+  render(): React.ReactNode {
+    const { items } = this.state
 
     return (
-      <div className="LaborGrading">
+      <div className="PensionGrading">
         <Container fluid>
           <h3>
-            <span>勞工保險投保薪資分級表</span>
+            <span>勞工退休金月提繳工資分級表</span>
           </h3>
           <span style={{ color: "#CC0000" }}>2022.1.1 起生效</span>
           <Row className="justify-content-md-center">
@@ -49,17 +48,19 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
                     <Table hover responsive>
                       <thead>
                         <tr>
-                          <th>投保薪資等級</th>
-                          <th>月薪資總額(元)</th>
-                          <th>月投保薪資(元)</th>
+                          <th>級距</th>
+                          <th>級</th>
+                          <th>實際工資/執行業務所得</th>
+                          <th>月提繳工資/月提繳執行業務所得</th>
                         </tr>
                       </thead>
                       <tbody>
                         {items.map((item, index) => (
                           <tr key={index}>
-                            <td rowSpan={1}>{item.Level}</td>
+                            <td rowSpan={1}>{item.Distance}</td>
+                            <td>{item.Level}</td>
                             <td>{item.SalaryRange}</td>
-                            <td>{item.InsuredSalaryLevel}</td>
+                            <td>{item.PaymentOfWages}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -70,7 +71,7 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
             </Col>
           </Row>
         </Container>
-      </div >
-    );
+      </div>
+    )
   }
 }

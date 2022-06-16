@@ -123,7 +123,7 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
       <div className="ComparisonTable">
         <Container fluid>
           <h3>
-            <span>勞健保及勞退費用對照表</span>
+            <span>勞健保保費及勞退提繳三合一費用對照表</span>
           </h3>
           <span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
 
