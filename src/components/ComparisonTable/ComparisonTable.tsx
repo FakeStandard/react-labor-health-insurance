@@ -125,7 +125,7 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
           <h3>
             <span>勞健保保費及勞退提繳三合一費用對照表</span>
           </h3>
-          <span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
+          <span style={{ color: "#CC0000" }}>更新於 2022.7.1</span>
 
           <Row className="justify-content-md-center">
             <Col xs sm md lg xl xxl={10}>
@@ -133,7 +133,7 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
                 style={{ marginTop: 50, paddingTop: 10 }}>
                 <Card.Body>
                   <Card.Text>
-                    <Table bordered  striped hover responsive className="Table">
+                    <Table bordered striped hover responsive className="Table">
                       <thead>
                         <tr className="TableTitle">
                           <th rowSpan={3}>等級</th>
