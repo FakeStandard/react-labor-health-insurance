@@ -50,8 +50,8 @@ export default class PensionGrading extends React.Component<IPensionGradingProps
                         <tr>
                           <th>級距</th>
                           <th>級</th>
-                          <th>實際工資/執行業務所得</th>
-                          <th>月提繳工資/月提繳執行業務所得</th>
+                          <th>實際工資/<br />執行業務所得(元)</th>
+                          <th>月提繳工資/<br />月提繳執行業務所得(元)</th>
                         </tr>
                       </thead>
                       <tbody>
