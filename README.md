@@ -32,4 +32,4 @@
 
 [全民健康保險投保金額分級表](https://data.gov.tw/dataset/20251)
 
-[勞工退休金月提繳分級表](https://data.gov.tw/dataset/6274 target="_blank")
+[勞工退休金月提繳分級表](https://data.gov.tw/dataset/6274)
