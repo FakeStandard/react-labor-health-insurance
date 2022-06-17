@@ -1,4 +1,4 @@
-import { Label, Separator, Stack, Text } from "@fluentui/react";
+import { Separator, Stack } from "@fluentui/react";
 import React from "react";
 import { Card, Col, Container, Row, Form } from "react-bootstrap";
 import "./Calculation.css"
@@ -138,7 +138,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
         }
       })
 
-      if (salary == "0") {
+      if (salary === "0") {
         this.setState({ errInput: false })
         return
       }
