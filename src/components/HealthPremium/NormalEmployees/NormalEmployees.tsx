@@ -57,14 +57,14 @@ export default class NormalEmployees extends React.Component<INormalEmployeesPro
                   <Card.Text>
                     <Table bordered striped hover responsive className="Table">
                       <thead>
-                        <tr>
+                        <tr className="TableTitle">
                           <th rowSpan={2}>投保金額等級</th>
                           <th rowSpan={2}>月投保金額</th>
                           <th colSpan={4}>被保險人及眷屬負擔金額<br />(負擔比率30%)</th>
                           <th rowSpan={2}>投保單位負擔金額<br />(負擔比率60%)</th>
                           <th rowSpan={2}>政府補助金額<br />(補助比率10%)</th>
                         </tr>
-                        <tr>
+                        <tr className="TableTitle">
                           <th>本人</th>
                           <th>本人+1眷口</th>
                           <th>本人+2眷口</th>

@@ -57,12 +57,12 @@ export default class Employers extends React.Component<IEmployersProps, IEmploye
                   <Card.Text>
                     <Table bordered striped hover responsive className="Table">
                       <thead>
-                        <tr>
+                        <tr className="TableTitle">
                           <th rowSpan={2}>投保金額等級</th>
                           <th rowSpan={2}>月投保金額</th>
                           <th colSpan={4}>被保險人及眷屬負擔金額<br />(負擔比率100%)</th>
                         </tr>
-                        <tr>
+                        <tr className="TableTitle">
                           <th>本人</th>
                           <th>本人+1眷口</th>
                           <th>本人+2眷口</th>
