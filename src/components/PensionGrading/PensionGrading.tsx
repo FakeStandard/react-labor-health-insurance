@@ -15,7 +15,7 @@ export default class PensionGrading extends React.Component<IPensionGradingProps
   }
 
   async componentDidMount() {
-    await fetch("json/pension-grading.json")
+    await fetch("JSON/pension-grading.json")
       .then(res => res.json())
       .then(res => {
         console.log(res)
