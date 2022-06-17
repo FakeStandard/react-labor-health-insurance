@@ -6,6 +6,7 @@ import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
 import NormalEmployees from "../HealthPremium/NormalEmployees/NormalEmployees";
+import PrivateStaff from "../HealthPremium/PrivateStaff/PrivateStaff";
 import PublicServants from "../HealthPremium/PublicServants/PublicServants";
 import Home from "../Home/Home";
 import LaborGrading from "../LaborGrading/LaborGrading";
@@ -17,7 +18,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "7",
+      selectKey: "8",
     }
   }
 
@@ -61,7 +62,9 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown.Item eventKey={7}>公務人員、公職人員、志願役軍人
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
-                  <NavDropdown.Item eventKey={8} disabled>私立學校教職員</NavDropdown.Item>
+                  <NavDropdown.Item eventKey={8}>私立學校教職員
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
                   <NavDropdown.Item eventKey={9} disabled>雇主、自營業主、專門職業及技術人員自行執業者</NavDropdown.Item>
                   <NavDropdown.Item eventKey={10} disabled>農會、漁會、水利會會員</NavDropdown.Item>
                   <NavDropdown.Item eventKey={11} disabled>職業工會會員</NavDropdown.Item>
@@ -110,6 +113,10 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
         {/* 公務人員、公職人員、志願役軍人 */}
         {(selectKey === "7") &&
           (<PublicServants />)}
+
+        {/* 私立學校教職員 */}
+        {(selectKey === "8") &&
+          (<PrivateStaff />)}
       </div>
     );
   }

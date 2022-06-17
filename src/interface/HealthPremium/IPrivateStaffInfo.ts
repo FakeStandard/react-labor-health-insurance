@@ -1,4 +1,4 @@
-export interface INormalEmployeesInfo {
+export interface IPrivateStaffInfo {
     Level: number  // 投保金額等級
     InsuredSalaryLevel: number  // 月投保金額
     Personal: number // 本人
