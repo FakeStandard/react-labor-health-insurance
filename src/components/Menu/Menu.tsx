@@ -5,19 +5,19 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
-import HealthPremiumNormal from "../HealthPremium/Normal/HealthPremiumNormal";
+import NormalEmployees from "../HealthPremium/NormalEmployees/NormalEmployees";
+import PublicServants from "../HealthPremium/PublicServants/PublicServants";
 import Home from "../Home/Home";
 import LaborGrading from "../LaborGrading/LaborGrading";
 import PensionGrading from "../PensionGrading/PensionGrading";
 import { IMenuProps } from "./IMenuProps";
 import { IMenuStates } from "./IMenuStates";
-
 export default class Menu extends React.Component<IMenuProps, IMenuStates> {
   constructor(props: IMenuProps) {
     super(props);
 
     this.state = {
-      selectKey: "6",
+      selectKey: "7",
     }
   }
 
@@ -36,13 +36,14 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
     return (
       <div>
+        {/* 路由 */}
         <Navbar expand="lg" bg="dark" variant="dark" onSelect={this.handleSelect}>
           <Container>
-            <NavbarBrand key={0} href="#" onClick={this.handleClick}>2022勞健保與薪資查詢</NavbarBrand>
+            <NavbarBrand key={0} href="/" onClick={this.handleClick}>2022勞健保與薪資查詢</NavbarBrand>
             <NavbarToggle aria-controls="menu-navbar" />
             <NavbarCollapse id="menu-navbar">
               <Nav>
-                <NavLink eventKey={1}>薪資即時試算</NavLink>
+                <NavLink eventKey={1} href="/calculation">薪資即時試算</NavLink>
                 <NavLink eventKey={2}>勞健保保費及勞退提繳三合一費用對照表</NavLink>
                 <NavDropdown title="投保薪資分級表">
                   <NavDropdown.Item eventKey={3}>勞工保險投保分級表</NavDropdown.Item>
@@ -57,7 +58,9 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown.Item eventKey={6}>公、民營事業、機構及有一定雇主之受僱者
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
-                  <NavDropdown.Item eventKey={7} disabled>公務人員、公職人員、志願役軍人</NavDropdown.Item>
+                  <NavDropdown.Item eventKey={7}>公務人員、公職人員、志願役軍人
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
                   <NavDropdown.Item eventKey={8} disabled>私立學校教職員</NavDropdown.Item>
                   <NavDropdown.Item eventKey={9} disabled>雇主、自營業主、專門職業及技術人員自行執業者</NavDropdown.Item>
                   <NavDropdown.Item eventKey={10} disabled>農會、漁會、水利會會員</NavDropdown.Item>
@@ -99,8 +102,14 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
           (<PensionGrading />)}
 
         {/* 全民健康保險保險費負擔金額表 */}
+
+        {/* 公、民營事業、機構及有一定雇主之受僱者 */}
         {(selectKey === "6") &&
-          (<HealthPremiumNormal />)}
+          (<NormalEmployees />)}
+
+        {/* 公務人員、公職人員、志願役軍人 */}
+        {(selectKey === "7") &&
+          (<PublicServants />)}
       </div>
     );
   }

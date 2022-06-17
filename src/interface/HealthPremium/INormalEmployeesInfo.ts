@@ -1,4 +1,4 @@
-export interface IHealthPremiumNormalInfo {
+export interface INormalEmployeesInfo {
     Level: string  // 投保金額等級
     InsuredSalaryLevel: string  // 月投保金額
     Personal: string // 本人

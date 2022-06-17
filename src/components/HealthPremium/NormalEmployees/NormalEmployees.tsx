@@ -1,19 +1,19 @@
 import React from "react";
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import { IHealthPremiumNormalInfo } from "../../../interface/IHealthPremiumInfo";
-import "./HealthPremiumNormal.css"
+import { INormalEmployeesInfo } from "../../../interface/HealthPremium/INormalEmployeesInfo";
+import "./NormalEmployees.css"
 
-export interface IHealthPremiumNormalProps {
+export interface INormalEmployeesProps {
 
 }
 
-export interface IHealthPremiumNormalStates {
+export interface INormalEmployeesStates {
   isLoaded: boolean,
-  items: IHealthPremiumNormalInfo[],
+  items: INormalEmployeesInfo[],
 }
 
-export default class HealthPremiumNormal extends React.Component<IHealthPremiumNormalProps, IHealthPremiumNormalStates>{
-  constructor(props: IHealthPremiumNormalProps) {
+export default class NormalEmployees extends React.Component<INormalEmployeesProps, INormalEmployeesStates>{
+  constructor(props: INormalEmployeesProps) {
     super(props)
 
     this.state = {
@@ -24,7 +24,7 @@ export default class HealthPremiumNormal extends React.Component<IHealthPremiumN
 
   async componentDidMount() {
     // get json data
-    await fetch("json/health-premium-normal.json")
+    await fetch("JSON/HealthPremium/NormalEmployees.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);
@@ -42,7 +42,7 @@ export default class HealthPremiumNormal extends React.Component<IHealthPremiumN
     const { items } = this.state
 
     return (
-      <div className="HealthPremiumNormal">
+      <div className="NormalEmployees">
         <Container fluid>
           <h3>
             <span>公、民營事業、機構及有一定雇主之受僱者</span>
