@@ -5,6 +5,7 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
+import AssociationMember from "../HealthPremium/AssociationMember/AssociationMember";
 import Employers from "../HealthPremium/Employers/Employers";
 import NormalEmployees from "../HealthPremium/NormalEmployees/NormalEmployees";
 import PrivateStaff from "../HealthPremium/PrivateStaff/PrivateStaff";
@@ -52,9 +53,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={4}>全民健康保險投保金額分級表</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item eventKey={5}>勞工退休金月提繳工資分級表
-                    {'  '}<Badge pill bg="danger">New</Badge>
-                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey={5}>勞工退休金月提繳工資分級表</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="全民健康保險保險費負擔金額表">
                   <NavDropdown.Item eventKey={6}>公、民營事業、機構及有一定雇主之受僱者
@@ -84,28 +83,23 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
         {/* 首頁 */}
         {(selectKey === "0") && (
-          <Home />
-        )}
+          <Home />)}
 
         {/* 薪資即時試算 */}
         {(selectKey === "1") && (
-          <Calculation />
-        )}
+          <Calculation />)}
 
         {/* 勞健保保費及勞退提繳三合一費用對照表 */}
         {(selectKey === "2") && (
-          <ComparisonTable />
-        )}
+          <ComparisonTable />)}
 
         {/* 勞工保險投保分級表 */}
         {(selectKey === "3") && (
-          <LaborGrading />
-        )}
+          <LaborGrading />)}
 
         {/* 全民健康保險投保金額分級表 */}
         {(selectKey === "4") && (
-          <HealthGrading />
-        )}
+          <HealthGrading />)}
 
         {/* 勞工退休金月提繳工資分級表 */}
         {(selectKey === "5") &&
@@ -131,7 +125,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
         {/* 農會、漁會、水利會會員 */}
         {(selectKey === "10") &&
-          (<Employers />)}
+          (<AssociationMember />)}
 
         {/* 職業工會會員 */}
         {(selectKey === "11") &&
