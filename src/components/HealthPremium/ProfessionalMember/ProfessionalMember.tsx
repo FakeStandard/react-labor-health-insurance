@@ -23,7 +23,7 @@ export default class ProfessionalMember extends React.Component<IProfessionalMem
 
   async componentDidMount() {
     // get json data
-    await fetch("JSON/HealthPremium/ProfessionalMember.json")
+    await fetch("./react-labor-health-insurance/JSON/HealthPremium/ProfessionalMember.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);

@@ -60,7 +60,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
 
   getData = async () => {
     // 勞保
-    await fetch("JSON/labor-grading.json")
+    await fetch("./react-labor-health-insurance/JSON/labor-grading.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res.normal);
@@ -70,7 +70,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       .finally(() => this.setState({ isLoaded: true }))
 
     // 健保
-    await fetch("JSON/health-grading.json")
+    await fetch("./react-labor-health-insurance/JSON/health-grading.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);
@@ -80,7 +80,7 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
       .finally(() => this.setState({ isLoaded: true }))
 
     // 勞退
-    await fetch("JSON/pension-grading.json")
+    await fetch("./react-labor-health-insurance/JSON/pension-grading.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);

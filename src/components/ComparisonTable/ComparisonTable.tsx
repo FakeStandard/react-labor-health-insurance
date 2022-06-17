@@ -43,7 +43,9 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
     let healthLength: number = 0;
 
     // 勞保
-    await fetch("./JSON/GradingTable/Labor.json")
+    // local
+    // ./JSON/GradingTable/Labor.json
+    await fetch("./react-labor-health-insurance/JSON/GradingTable/Labor.json")
       .then(res => res.json())
       .then(res => {
         laborLength = res.normal.length;
@@ -51,8 +53,10 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
       .catch((err) => console.log(err))
       .finally(() => this.setState({ isLoaded: true }))
 
+    // local
+    // ./JSON/GradingTable/Health.json
     // 健保
-    await fetch("./JSON/GradingTable/Health.json")
+    await fetch("./react-labor-health-insurance/JSON/GradingTable/Health.json")
       .then(res => res.json())
       .then(res => {
         healthInfo = res;

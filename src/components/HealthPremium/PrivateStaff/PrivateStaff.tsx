@@ -24,7 +24,7 @@ export default class PublicServants extends React.Component<IPrivateStaffProps, 
 
   async componentDidMount() {
     // get json data
-    await fetch("JSON/HealthPremium/PrivateStaff.json")
+    await fetch("./react-labor-health-insurance/JSON/HealthPremium/PrivateStaff.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);

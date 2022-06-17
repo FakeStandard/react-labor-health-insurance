@@ -22,7 +22,7 @@ export default class PensionGrading extends React.Component<IPensionProps, IPens
   }
 
   async componentDidMount() {
-    await fetch("JSON/GradingTable/Pension.json")
+    await fetch("./react-labor-health-insurance/JSON/GradingTable/Pension.json")
       .then(res => res.json())
       .then(res => {
         console.log(res)

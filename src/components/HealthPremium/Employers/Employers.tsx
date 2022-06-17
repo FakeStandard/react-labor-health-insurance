@@ -24,7 +24,7 @@ export default class Employers extends React.Component<IEmployersProps, IEmploye
 
   async componentDidMount() {
     // get json data
-    await fetch("JSON/HealthPremium/Employers.json")
+    await fetch("./react-labor-health-insurance/JSON/HealthPremium/Employers.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);

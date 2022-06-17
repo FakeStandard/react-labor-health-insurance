@@ -23,7 +23,7 @@ export default class Labor extends React.Component<ILaborProps, ILaborStates>{
 
   componentDidMount = async () => {
     // get json data
-    await fetch("JSON/GradingTable/Labor.json")
+    await fetch("./react-labor-health-insurance/JSON/GradingTable/Labor.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res.normal);
