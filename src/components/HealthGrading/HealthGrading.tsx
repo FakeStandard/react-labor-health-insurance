@@ -16,7 +16,7 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
 
   componentDidMount = async () => {
     // get json data
-    await fetch("json/health-grading.json")
+    await fetch("JSON/health-grading.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);

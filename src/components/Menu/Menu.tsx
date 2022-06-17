@@ -21,7 +21,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "11",
+      selectKey: "0",
     }
   }
 
@@ -43,11 +43,11 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
         {/* 路由 */}
         <Navbar expand="lg" bg="dark" variant="dark" onSelect={this.handleSelect}>
           <Container>
-            <NavbarBrand key={0} href="/" onClick={this.handleClick}>2022勞健保與薪資查詢</NavbarBrand>
+            <NavbarBrand key={0} onClick={this.handleClick}>2022勞健保與薪資查詢</NavbarBrand>
             <NavbarToggle aria-controls="menu-navbar" />
             <NavbarCollapse id="menu-navbar">
               <Nav>
-                <NavLink eventKey={1} href="/calculation">薪資即時試算</NavLink>
+                <NavLink eventKey={1}>薪資即時試算</NavLink>
                 <NavLink eventKey={2}>勞健保保費及勞退提繳三合一費用對照表</NavLink>
                 <NavDropdown title="投保薪資分級表">
                   <NavDropdown.Item eventKey={3}>勞工保險投保分級表</NavDropdown.Item>

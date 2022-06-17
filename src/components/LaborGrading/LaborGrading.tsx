@@ -16,7 +16,7 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
 
   componentDidMount = async () => {
     // get json data
-    await fetch("json/labor-grading.json")
+    await fetch("JSON/labor-grading.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res.normal);
