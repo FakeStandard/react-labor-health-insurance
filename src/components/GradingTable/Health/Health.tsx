@@ -1,11 +1,19 @@
 import React from "react";
-import "./HealthGrading.css"
+import "./Health.css"
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import { IHealthGradingStates } from "./HealthGradingStates";
-import { IHealthGradingProps } from "./IHealthGradingProps";
+import { IHealthInfo } from "../../../interface/GradingTable/IHealthInfo";
 
-export default class HealthGrading extends React.Component<IHealthGradingProps, IHealthGradingStates>{
-  constructor(props: IHealthGradingProps) {
+export interface IHealthProps {
+
+}
+
+export interface IHealthStates {
+  isLoaded: boolean,
+  items: IHealthInfo[],
+}
+
+export default class Health extends React.Component<IHealthProps, IHealthStates>{
+  constructor(props: IHealthProps) {
     super(props);
 
     this.state = {
@@ -16,7 +24,7 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
 
   componentDidMount = async () => {
     // get json data
-    await fetch("JSON/health-grading.json")
+    await fetch("JSON/GradingTable/Health.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);
@@ -30,11 +38,11 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
     // componentWillUnmount
   }
 
-  render(): React.ReactElement<IHealthGradingProps> {
+  render(): React.ReactElement<IHealthProps> {
     const { items } = this.state;
 
     return (
-      <div className="HealthGrading">
+      <div className="Health">
         <Container fluid>
           <h3>
             <span>全民健康保險投保金額分級表</span>
@@ -47,7 +55,7 @@ export default class HealthGrading extends React.Component<IHealthGradingProps, 
                 style={{ marginTop: 50, paddingTop: 10 }}>
                 <Card.Body>
                   <Card.Text>
-                    <Table  hover responsive>
+                    <Table hover responsive>
                       <thead >
                         <tr>
                           <th>組別級距</th>

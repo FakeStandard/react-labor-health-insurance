@@ -1,11 +1,18 @@
 import React from "react";
-import { IPensionGradingProps } from "./IPensionGradingProps";
-import { IPensionGradingStates } from "./IPensionGradingStates";
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import "./PensionGrading.css";
+import "./Pension.css";
+import { IPensionInfo } from "../../../interface/GradingTable/IPensionInfo";
 
-export default class PensionGrading extends React.Component<IPensionGradingProps, IPensionGradingStates>{
-  constructor(props: IPensionGradingProps) {
+export interface IPensionProps {
+}
+
+export interface IPensionStates {
+  isLoaded: boolean,
+  items: IPensionInfo[],
+}
+
+export default class PensionGrading extends React.Component<IPensionProps, IPensionStates>{
+  constructor(props: IPensionProps) {
     super(props)
 
     this.state = {
@@ -15,7 +22,7 @@ export default class PensionGrading extends React.Component<IPensionGradingProps
   }
 
   async componentDidMount() {
-    await fetch("JSON/pension-grading.json")
+    await fetch("JSON/GradingTable/Pension.json")
       .then(res => res.json())
       .then(res => {
         console.log(res)
@@ -33,7 +40,7 @@ export default class PensionGrading extends React.Component<IPensionGradingProps
     const { items } = this.state
 
     return (
-      <div className="PensionGrading">
+      <div className="Pension">
         <Container fluid>
           <h3>
             <span>勞工退休金月提繳工資分級表</span>

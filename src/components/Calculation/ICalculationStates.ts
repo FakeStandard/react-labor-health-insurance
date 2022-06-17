@@ -1,5 +1,5 @@
-import { IHealthInfo } from "../../interface/IHealthInfo"
-import { ILaborInfo } from "../../interface/ILaborInfo"
+import { IHealthInfo } from "../../interface/GradingTable/IHealthInfo";
+import { ILaborInfo } from "../../interface/GradingTable/ILaborInfo";
 
 export interface ICalculationStates {
     isLoaded: boolean,

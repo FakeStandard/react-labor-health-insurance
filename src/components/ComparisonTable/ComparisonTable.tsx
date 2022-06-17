@@ -1,11 +1,17 @@
 import React from "react";
 import "./ComparisonTable.css"
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import { IComparisonTableProps } from "./IComparisonTableProps";
-import { IComparisonTableStates } from "./IComparisonTableStates";
-import { IHealthInfo } from "../../interface/IHealthInfo";
+import { IHealthInfo } from "../../interface/GradingTable/IHealthInfo";
 import { IItemInfo } from "../../interface/IItemInfo";
 
+export interface IComparisonTableProps {
+
+}
+
+export interface IComparisonTableStates {
+  isLoaded: boolean,
+  items: IItemInfo[],
+}
 export default class ComparisonTable extends React.Component<IComparisonTableProps, IComparisonTableStates>{
   constructor(props: IComparisonTableProps) {
     super(props);
@@ -37,7 +43,7 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
     let healthLength: number = 0;
 
     // 勞保
-    await fetch("JSON/labor-grading.json")
+    await fetch("JSON/GradingTable/Labor.json")
       .then(res => res.json())
       .then(res => {
         laborLength = res.normal.length;
@@ -46,7 +52,7 @@ export default class ComparisonTable extends React.Component<IComparisonTablePro
       .finally(() => this.setState({ isLoaded: true }))
 
     // 健保
-    await fetch("JSON/health-grading.json")
+    await fetch("JSON/GradingTable/Health.json")
       .then(res => res.json())
       .then(res => {
         healthInfo = res;

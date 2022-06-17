@@ -1,11 +1,18 @@
 import React from "react";
-import "./LaborGrading.css"
+import "./Labor.css"
 import { Card, Col, Container, Row, Table } from "react-bootstrap";
-import { ILaborGradingProps } from "./ILaborGradingProps";
-import { ILaborGradingStates } from "./ILaborGradingStates";
+import { ILaborInfo } from "../../../interface/GradingTable/ILaborInfo";
 
-export default class LaborGrading extends React.Component<ILaborGradingProps, ILaborGradingStates>{
-  constructor(props: ILaborGradingProps) {
+export interface ILaborProps {
+}
+
+export interface ILaborStates {
+  isLoaded: boolean,
+  items: ILaborInfo[],
+}
+
+export default class Labor extends React.Component<ILaborProps, ILaborStates>{
+  constructor(props: ILaborProps) {
     super(props);
 
     this.state = {
@@ -16,7 +23,7 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
 
   componentDidMount = async () => {
     // get json data
-    await fetch("JSON/labor-grading.json")
+    await fetch("JSON/GradingTable/Labor.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res.normal);
@@ -30,11 +37,11 @@ export default class LaborGrading extends React.Component<ILaborGradingProps, IL
     // componentWillUnmount
   }
 
-  render(): React.ReactElement<ILaborGradingProps> {
+  render(): React.ReactElement<ILaborProps> {
     const { items } = this.state;
 
     return (
-      <div className="LaborGrading">
+      <div className="Labor">
         <Container fluid>
           <h3>
             <span>勞工保險投保薪資分級表</span>

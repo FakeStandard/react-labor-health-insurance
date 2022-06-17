@@ -4,7 +4,6 @@ import NavbarCollapse from "react-bootstrap/esm/NavbarCollapse";
 import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
-import HealthGrading from "../HealthGrading/HealthGrading";
 import AssociationMember from "../HealthPremium/AssociationMember/AssociationMember";
 import Employers from "../HealthPremium/Employers/Employers";
 import NormalEmployees from "../HealthPremium/NormalEmployees/NormalEmployees";
@@ -12,10 +11,11 @@ import PrivateStaff from "../HealthPremium/PrivateStaff/PrivateStaff";
 import ProfessionalMember from "../HealthPremium/ProfessionalMember/ProfessionalMember";
 import PublicServants from "../HealthPremium/PublicServants/PublicServants";
 import Home from "../Home/Home";
-import LaborGrading from "../LaborGrading/LaborGrading";
-import PensionGrading from "../PensionGrading/PensionGrading";
 import { IMenuProps } from "./IMenuProps";
 import { IMenuStates } from "./IMenuStates";
+import Health from "../GradingTable/Health/Health";
+import Labor from "../GradingTable/Labor/Labor";
+import Pension from "../GradingTable/Pension/Pension";
 export default class Menu extends React.Component<IMenuProps, IMenuStates> {
   constructor(props: IMenuProps) {
     super(props);
@@ -96,15 +96,15 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
         {/* 勞工保險投保分級表 */}
         {(selectKey === "3") && (
-          <LaborGrading />)}
+          <Labor />)}
 
         {/* 全民健康保險投保金額分級表 */}
         {(selectKey === "4") && (
-          <HealthGrading />)}
+          <Health />)}
 
         {/* 勞工退休金月提繳工資分級表 */}
         {(selectKey === "5") &&
-          (<PensionGrading />)}
+          (<Pension />)}
 
         {/* 全民健康保險保險費負擔金額表 */}
 
