@@ -60,22 +60,26 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown.Item eventKey={6}>公、民營事業、機構及有一定雇主之受僱者
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={7}>公務人員、公職人員、志願役軍人
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={8}>私立學校教職員
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={9}>雇主、自營業主、專門職業及技術人員自行執業者
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={10}>農會、漁會、水利會會員
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
+                  <NavDropdown.Divider />
                   <NavDropdown.Item eventKey={11}>職業工會會員
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
                 </NavDropdown>
               </Nav>
             </NavbarCollapse>
