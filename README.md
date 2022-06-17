@@ -28,6 +28,7 @@
 | 2022/06/17 | Add Page - 健保負擔-私立學校教職員                               |
 | 2022/06/17 | Add Page - 健保負擔-雇主、自營業主、專門職業及技術人員自行執業者 |
 | 2022/06/17 | Add Page - 健保負擔-農會、漁會、水利會會員                       |
+| 2022/06/17 | Add Page - 健保負擔-職業工會會員                                 |
 
 ## Product
 [Labor Health Insurance](https://fakestandard.github.io/react-labor-health-insurance)
