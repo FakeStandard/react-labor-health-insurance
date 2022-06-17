@@ -5,6 +5,7 @@ import NavbarToggle from "react-bootstrap/esm/NavbarToggle";
 import Calculation from "../Calculation/Calculation";
 import ComparisonTable from "../ComparisonTable/ComparisonTable";
 import HealthGrading from "../HealthGrading/HealthGrading";
+import Employers from "../HealthPremium/Employers/Employers";
 import NormalEmployees from "../HealthPremium/NormalEmployees/NormalEmployees";
 import PrivateStaff from "../HealthPremium/PrivateStaff/PrivateStaff";
 import PublicServants from "../HealthPremium/PublicServants/PublicServants";
@@ -18,7 +19,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "8",
+      selectKey: "10",
     }
   }
 
@@ -65,9 +66,15 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown.Item eventKey={8}>私立學校教職員
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavDropdown.Item>
-                  <NavDropdown.Item eventKey={9} disabled>雇主、自營業主、專門職業及技術人員自行執業者</NavDropdown.Item>
-                  <NavDropdown.Item eventKey={10} disabled>農會、漁會、水利會會員</NavDropdown.Item>
-                  <NavDropdown.Item eventKey={11} disabled>職業工會會員</NavDropdown.Item>
+                  <NavDropdown.Item eventKey={9}>雇主、自營業主、專門職業及技術人員自行執業者
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey={10}>農會、漁會、水利會會員
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item eventKey={11}>職業工會會員
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavDropdown.Item>
                   <NavDropdown.Divider />
                 </NavDropdown>
               </Nav>
@@ -117,6 +124,18 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
         {/* 私立學校教職員 */}
         {(selectKey === "8") &&
           (<PrivateStaff />)}
+
+        {/* 雇主、自營業主、專門職業及技術人員自行執業者 */}
+        {(selectKey === "9") &&
+          (<Employers />)}
+
+        {/* 農會、漁會、水利會會員 */}
+        {(selectKey === "10") &&
+          (<Employers />)}
+
+        {/* 職業工會會員 */}
+        {(selectKey === "11") &&
+          (<Employers />)}
       </div>
     );
   }
