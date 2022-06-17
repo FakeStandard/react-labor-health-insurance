@@ -45,7 +45,7 @@ export default class PublicServants extends React.Component<IPublicServantsProps
 			<div className="PublicServants">
 				<Container fluid>
 					<h3>
-						<span>公、民營事業、機構及有一定雇主之受僱者</span>
+						<span>公務人員、公職人員、志願役軍人</span>
 					</h3>
 					<span style={{ color: "#CC0000" }}>2022.7.1 起生效</span>
 
