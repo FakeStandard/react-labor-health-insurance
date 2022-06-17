@@ -1,0 +1,410 @@
+[
+    {
+        "Level": 1,
+        "InsuredSalaryLevel": 25250,
+        "Personal": 783,
+        "AddOne": 1566,
+        "AddTwo": 2349,
+        "AddThree": 3132
+    },
+    {
+        "Level": 2,
+        "InsuredSalaryLevel": 26400,
+        "Personal": 819,
+        "AddOne": 1638,
+        "AddTwo": 2457,
+        "AddThree": 3276
+    },
+    {
+        "Level": 3,
+        "InsuredSalaryLevel": 27600,
+        "Personal": 856,
+        "AddOne": 1712,
+        "AddTwo": 2568,
+        "AddThree": 3424
+    },
+    {
+        "Level": 4,
+        "InsuredSalaryLevel": 28800,
+        "Personal": 893,
+        "AddOne": 1786,
+        "AddTwo": 2679,
+        "AddThree": 3572
+    },
+    {
+        "Level": 5,
+        "InsuredSalaryLevel": 30300,
+        "Personal": 940,
+        "AddOne": 1880,
+        "AddTwo": 2820,
+        "AddThree": 3760
+    },
+    {
+        "Level": 6,
+        "InsuredSalaryLevel": 31800,
+        "Personal": 986,
+        "AddOne": 1972,
+        "AddTwo": 2958,
+        "AddThree": 3944
+    },
+    {
+        "Level": 7,
+        "InsuredSalaryLevel": 33300,
+        "Personal": 1033,
+        "AddOne": 2066,
+        "AddTwo": 3099,
+        "AddThree": 4132
+    },
+    {
+        "Level": 8,
+        "InsuredSalaryLevel": 34800,
+        "Personal": 1079,
+        "AddOne": 2158,
+        "AddTwo": 3237,
+        "AddThree": 4316
+    },
+    {
+        "Level": 9,
+        "InsuredSalaryLevel": 36300,
+        "Personal": 1126,
+        "AddOne": 2252,
+        "AddTwo": 3378,
+        "AddThree": 4504
+    },
+    {
+        "Level": 10,
+        "InsuredSalaryLevel": 38200,
+        "Personal": 1185,
+        "AddOne": 2370,
+        "AddTwo": 3555,
+        "AddThree": 4740
+    },
+    {
+        "Level": 11,
+        "InsuredSalaryLevel": 40100,
+        "Personal": 1244,
+        "AddOne": 2488,
+        "AddTwo": 3732,
+        "AddThree": 4976
+    },
+    {
+        "Level": 12,
+        "InsuredSalaryLevel": 42000,
+        "Personal": 1303,
+        "AddOne": 2606,
+        "AddTwo": 3909,
+        "AddThree": 5212
+    },
+    {
+        "Level": 13,
+        "InsuredSalaryLevel": 43900,
+        "Personal": 1362,
+        "AddOne": 2724,
+        "AddTwo": 4086,
+        "AddThree": 5448
+    },
+    {
+        "Level": 14,
+        "InsuredSalaryLevel": 45800,
+        "Personal": 1421,
+        "AddOne": 2842,
+        "AddTwo": 4263,
+        "AddThree": 5684
+    },
+    {
+        "Level": 15,
+        "InsuredSalaryLevel": 48200,
+        "Personal": 1495,
+        "AddOne": 2990,
+        "AddTwo": 4485,
+        "AddThree": 5980
+    },
+    {
+        "Level": 16,
+        "InsuredSalaryLevel": 50600,
+        "Personal": 1570,
+        "AddOne": 3140,
+        "AddTwo": 4710,
+        "AddThree": 6280
+    },
+    {
+        "Level": 17,
+        "InsuredSalaryLevel": 53000,
+        "Personal": 1644,
+        "AddOne": 3288,
+        "AddTwo": 4932,
+        "AddThree": 6576
+    },
+    {
+        "Level": 18,
+        "InsuredSalaryLevel": 55400,
+        "Personal": 1719,
+        "AddOne": 3438,
+        "AddTwo": 5157,
+        "AddThree": 6876
+    },
+    {
+        "Level": 19,
+        "InsuredSalaryLevel": 57800,
+        "Personal": 1793,
+        "AddOne": 3586,
+        "AddTwo": 5379,
+        "AddThree": 7172
+    },
+    {
+        "Level": 20,
+        "InsuredSalaryLevel": 60800,
+        "Personal": 1886,
+        "AddOne": 3772,
+        "AddTwo": 5658,
+        "AddThree": 7544
+    },
+    {
+        "Level": 21,
+        "InsuredSalaryLevel": 63800,
+        "Personal": 1979,
+        "AddOne": 3958,
+        "AddTwo": 5937,
+        "AddThree": 7916
+    },
+    {
+        "Level": 22,
+        "InsuredSalaryLevel": 66800,
+        "Personal": 2072,
+        "AddOne": 4144,
+        "AddTwo": 6216,
+        "AddThree": 8288
+    },
+    {
+        "Level": 23,
+        "InsuredSalaryLevel": 69800,
+        "Personal": 2165,
+        "AddOne": 4330,
+        "AddTwo": 6495,
+        "AddThree": 8660
+    },
+    {
+        "Level": 24,
+        "InsuredSalaryLevel": 72800,
+        "Personal": 2258,
+        "AddOne": 4516,
+        "AddTwo": 6774,
+        "AddThree": 9032
+    },
+    {
+        "Level": 25,
+        "InsuredSalaryLevel": 76500,
+        "Personal": 2373,
+        "AddOne": 4746,
+        "AddTwo": 7119,
+        "AddThree": 9492
+    },
+    {
+        "Level": 26,
+        "InsuredSalaryLevel": 80200,
+        "Personal": 2488,
+        "AddOne": 4976,
+        "AddTwo": 7464,
+        "AddThree": 9952
+    },
+    {
+        "Level": 27,
+        "InsuredSalaryLevel": 83900,
+        "Personal": 2603,
+        "AddOne": 5206,
+        "AddTwo": 7809,
+        "AddThree": 10412
+    },
+    {
+        "Level": 28,
+        "InsuredSalaryLevel": 87600,
+        "Personal": 2717,
+        "AddOne": 5434,
+        "AddTwo": 8151,
+        "AddThree": 10868
+    },
+    {
+        "Level": 29,
+        "InsuredSalaryLevel": 92100,
+        "Personal": 2857,
+        "AddOne": 5714,
+        "AddTwo": 8571,
+        "AddThree": 11428
+    },
+    {
+        "Level": 30,
+        "InsuredSalaryLevel": 96600,
+        "Personal": 2997,
+        "AddOne": 5994,
+        "AddTwo": 8991,
+        "AddThree": 11988
+    },
+    {
+        "Level": 31,
+        "InsuredSalaryLevel": 101100,
+        "Personal": 3136,
+        "AddOne": 6272,
+        "AddTwo": 9408,
+        "AddThree": 12544
+    },
+    {
+        "Level": 32,
+        "InsuredSalaryLevel": 105600,
+        "Personal": 3276,
+        "AddOne": 6552,
+        "AddTwo": 9828,
+        "AddThree": 13104
+    },
+    {
+        "Level": 33,
+        "InsuredSalaryLevel": 110100,
+        "Personal": 3415,
+        "AddOne": 6830,
+        "AddTwo": 10245,
+        "AddThree": 13660
+    },
+    {
+        "Level": 34,
+        "InsuredSalaryLevel": 115500,
+        "Personal": 3583,
+        "AddOne": 7166,
+        "AddTwo": 10749,
+        "AddThree": 14332
+    },
+    {
+        "Level": 35,
+        "InsuredSalaryLevel": 120900,
+        "Personal": 3750,
+        "AddOne": 7500,
+        "AddTwo": 11250,
+        "AddThree": 15000
+    },
+    {
+        "Level": 36,
+        "InsuredSalaryLevel": 126300,
+        "Personal": 3918,
+        "AddOne": 7836,
+        "AddTwo": 11754,
+        "AddThree": 15672
+    },
+    {
+        "Level": 37,
+        "InsuredSalaryLevel": 131700,
+        "Personal": 4085,
+        "AddOne": 8170,
+        "AddTwo": 12255,
+        "AddThree": 16340
+    },
+    {
+        "Level": 38,
+        "InsuredSalaryLevel": 137100,
+        "Personal": 4253,
+        "AddOne": 8506,
+        "AddTwo": 12759,
+        "AddThree": 17012
+    },
+    {
+        "Level": 39,
+        "InsuredSalaryLevel": 142500,
+        "Personal": 4420,
+        "AddOne": 8840,
+        "AddTwo": 13260,
+        "AddThree": 17680
+    },
+    {
+        "Level": 40,
+        "InsuredSalaryLevel": 147900,
+        "Personal": 4588,
+        "AddOne": 9176,
+        "AddTwo": 13764,
+        "AddThree": 18352
+    },
+    {
+        "Level": 41,
+        "InsuredSalaryLevel": 150000,
+        "Personal": 4653,
+        "AddOne": 9306,
+        "AddTwo": 13959,
+        "AddThree": 18612
+    },
+    {
+        "Level": 42,
+        "InsuredSalaryLevel": 156400,
+        "Personal": 4852,
+        "AddOne": 9704,
+        "AddTwo": 14556,
+        "AddThree": 19408
+    },
+    {
+        "Level": 43,
+        "InsuredSalaryLevel": 162800,
+        "Personal": 5050,
+        "AddOne": 10100,
+        "AddTwo": 15150,
+        "AddThree": 20200
+    },
+    {
+        "Level": 44,
+        "InsuredSalaryLevel": 169200,
+        "Personal": 5249,
+        "AddOne": 10498,
+        "AddTwo": 15747,
+        "AddThree": 20996
+    },
+    {
+        "Level": 45,
+        "InsuredSalaryLevel": 175600,
+        "Personal": 5447,
+        "AddOne": 10894,
+        "AddTwo": 16341,
+        "AddThree": 21788
+    },
+    {
+        "Level": 46,
+        "InsuredSalaryLevel": 182000,
+        "Personal": 5646,
+        "AddOne": 11292,
+        "AddTwo": 16938,
+        "AddThree": 22584
+    },
+    {
+        "Level": 47,
+        "InsuredSalaryLevel": 189500,
+        "Personal": 5878,
+        "AddOne": 11756,
+        "AddTwo": 17634,
+        "AddThree": 23512
+    },
+    {
+        "Level": 48,
+        "InsuredSalaryLevel": 197000,
+        "Personal": 6111,
+        "AddOne": 12222,
+        "AddTwo": 18333,
+        "AddThree": 24444
+    },
+    {
+        "Level": 49,
+        "InsuredSalaryLevel": 204500,
+        "Personal": 6344,
+        "AddOne": 12688,
+        "AddTwo": 19032,
+        "AddThree": 25376
+    },
+    {
+        "Level": 50,
+        "InsuredSalaryLevel": 212000,
+        "Personal": 6576,
+        "AddOne": 13152,
+        "AddTwo": 19728,
+        "AddThree": 26304
+    },
+    {
+        "Level": 51,
+        "InsuredSalaryLevel": 219500,
+        "Personal": 6809,
+        "AddOne": 13618,
+        "AddTwo": 20427,
+        "AddThree": 27236
+    }
+]

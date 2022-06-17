@@ -9,6 +9,7 @@ import AssociationMember from "../HealthPremium/AssociationMember/AssociationMem
 import Employers from "../HealthPremium/Employers/Employers";
 import NormalEmployees from "../HealthPremium/NormalEmployees/NormalEmployees";
 import PrivateStaff from "../HealthPremium/PrivateStaff/PrivateStaff";
+import ProfessionalMember from "../HealthPremium/ProfessionalMember/ProfessionalMember";
 import PublicServants from "../HealthPremium/PublicServants/PublicServants";
 import Home from "../Home/Home";
 import LaborGrading from "../LaborGrading/LaborGrading";
@@ -20,7 +21,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     super(props);
 
     this.state = {
-      selectKey: "10",
+      selectKey: "11",
     }
   }
 
@@ -129,7 +130,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
 
         {/* 職業工會會員 */}
         {(selectKey === "11") &&
-          (<Employers />)}
+          (<ProfessionalMember />)}
       </div>
     );
   }
