@@ -1,0 +1,622 @@
+[
+    {
+        "InsuredSalaryLevel": 11100,
+        "InsuredItems": [
+            {
+                "InsuredDays": 1,
+                "Personal": 9,
+                "Employer": 30
+            },
+            {
+                "InsuredDays": 2,
+                "Personal": 17,
+                "Employer": 59
+            },
+            {
+                "InsuredDays": 3,
+                "Personal": 25,
+                "Employer": 90
+            },
+            {
+                "InsuredDays": 4,
+                "Personal": 34,
+                "Employer": 119
+            },
+            {
+                "InsuredDays": 5,
+                "Personal": 43,
+                "Employer": 149
+            },
+            {
+                "InsuredDays": 6,
+                "Personal": 51,
+                "Employer": 179
+            },
+            {
+                "InsuredDays": 7,
+                "Personal": 59,
+                "Employer": 208
+            },
+            {
+                "InsuredDays": 8,
+                "Personal": 68,
+                "Employer": 239
+            },
+            {
+                "InsuredDays": 9,
+                "Personal": 77,
+                "Employer": 268
+            },
+            {
+                "InsuredDays": 10,
+                "Personal": 85,
+                "Employer": 298
+            },
+            {
+                "InsuredDays": 11,
+                "Personal": 93,
+                "Employer": 327
+            },
+            {
+                "InsuredDays": 12,
+                "Personal": 102,
+                "Employer": 357
+            },
+            {
+                "InsuredDays": 13,
+                "Personal": 111,
+                "Employer": 388
+            },
+            {
+                "InsuredDays": 14,
+                "Personal": 119,
+                "Employer": 417
+            },
+            {
+                "InsuredDays": 15,
+                "Personal": 128,
+                "Employer": 447
+            },
+            {
+                "InsuredDays": 16,
+                "Personal": 136,
+                "Employer": 476
+            },
+            {
+                "InsuredDays": 17,
+                "Personal": 145,
+                "Employer": 506
+            },
+            {
+                "InsuredDays": 18,
+                "Personal": 153,
+                "Employer": 537
+            },
+            {
+                "InsuredDays": 19,
+                "Personal": 162,
+                "Employer": 566
+            },
+            {
+                "InsuredDays": 20,
+                "Personal": 170,
+                "Employer": 596
+            },
+            {
+                "InsuredDays": 21,
+                "Personal": 179,
+                "Employer": 625
+            },
+            {
+                "InsuredDays": 22,
+                "Personal": 187,
+                "Employer": 655
+            },
+            {
+                "InsuredDays": 23,
+                "Personal": 196,
+                "Employer": 685
+            },
+            {
+                "InsuredDays": 24,
+                "Personal": 204,
+                "Employer": 715
+            },
+            {
+                "InsuredDays": 25,
+                "Personal": 213,
+                "Employer": 745
+            },
+            {
+                "InsuredDays": 26,
+                "Personal": 221,
+                "Employer": 774
+            },
+            {
+                "InsuredDays": 27,
+                "Personal": 230,
+                "Employer": 804
+            },
+            {
+                "InsuredDays": 28,
+                "Personal": 239,
+                "Employer": 834
+            },
+            {
+                "InsuredDays": 29,
+                "Personal": 246,
+                "Employer": 864
+            },
+            {
+                "InsuredDays": 30,
+                "Personal": 255,
+                "Employer": 894
+            }
+        ]
+    },
+    {
+        "InsuredSalaryLevel": 12540,
+        "InsuredItems": [
+            {
+                "InsuredDays": 1,
+                "Personal": 10,
+                "Employer": 34
+            },
+            {
+                "InsuredDays": 2,
+                "Personal": 20,
+                "Employer": 67
+            },
+            {
+                "InsuredDays": 3,
+                "Personal": 29,
+                "Employer": 101
+            },
+            {
+                "InsuredDays": 4,
+                "Personal": 38,
+                "Employer": 135
+            },
+            {
+                "InsuredDays": 5,
+                "Personal": 48,
+                "Employer": 169
+            },
+            {
+                "InsuredDays": 6,
+                "Personal": 58,
+                "Employer": 202
+            },
+            {
+                "InsuredDays": 7,
+                "Personal": 67,
+                "Employer": 235
+            },
+            {
+                "InsuredDays": 8,
+                "Personal": 77,
+                "Employer": 269
+            },
+            {
+                "InsuredDays": 9,
+                "Personal": 87,
+                "Employer": 303
+            },
+            {
+                "InsuredDays": 10,
+                "Personal": 96,
+                "Employer": 336
+            },
+            {
+                "InsuredDays": 11,
+                "Personal": 106,
+                "Employer": 370
+            },
+            {
+                "InsuredDays": 12,
+                "Personal": 115,
+                "Employer": 404
+            },
+            {
+                "InsuredDays": 13,
+                "Personal": 125,
+                "Employer": 437
+            },
+            {
+                "InsuredDays": 14,
+                "Personal": 135,
+                "Employer": 471
+            },
+            {
+                "InsuredDays": 15,
+                "Personal": 145,
+                "Employer": 505
+            },
+            {
+                "InsuredDays": 16,
+                "Personal": 153,
+                "Employer": 539
+            },
+            {
+                "InsuredDays": 17,
+                "Personal": 163,
+                "Employer": 572
+            },
+            {
+                "InsuredDays": 18,
+                "Personal": 173,
+                "Employer": 606
+            },
+            {
+                "InsuredDays": 19,
+                "Personal": 183,
+                "Employer": 640
+            },
+            {
+                "InsuredDays": 20,
+                "Personal": 193,
+                "Employer": 673
+            },
+            {
+                "InsuredDays": 21,
+                "Personal": 202,
+                "Employer": 706
+            },
+            {
+                "InsuredDays": 22,
+                "Personal": 211,
+                "Employer": 740
+            },
+            {
+                "InsuredDays": 23,
+                "Personal": 221,
+                "Employer": 774
+            },
+            {
+                "InsuredDays": 24,
+                "Personal": 231,
+                "Employer": 807
+            },
+            {
+                "InsuredDays": 25,
+                "Personal": 240,
+                "Employer": 841
+            },
+            {
+                "InsuredDays": 26,
+                "Personal": 250,
+                "Employer": 875
+            },
+            {
+                "InsuredDays": 27,
+                "Personal": 260,
+                "Employer": 909
+            },
+            {
+                "InsuredDays": 28,
+                "Personal": 269,
+                "Employer": 942
+            },
+            {
+                "InsuredDays": 29,
+                "Personal": 279,
+                "Employer": 976
+            },
+            {
+                "InsuredDays": 30,
+                "Personal": 288,
+                "Employer": 1010
+            }
+        ]
+    },
+    {
+        "InsuredSalaryLevel": 13500,
+        "InsuredItems": [
+            {
+                "InsuredDays": 1,
+                "Personal": 10,
+                "Employer": 36
+            },
+            {
+                "InsuredDays": 2,
+                "Personal": 21,
+                "Employer": 72
+            },
+            {
+                "InsuredDays": 3,
+                "Personal": 31,
+                "Employer": 108
+            },
+            {
+                "InsuredDays": 4,
+                "Personal": 42,
+                "Employer": 145
+            },
+            {
+                "InsuredDays": 5,
+                "Personal": 52,
+                "Employer": 181
+            },
+            {
+                "InsuredDays": 6,
+                "Personal": 62,
+                "Employer": 217
+            },
+            {
+                "InsuredDays": 7,
+                "Personal": 72,
+                "Employer": 254
+            },
+            {
+                "InsuredDays": 8,
+                "Personal": 83,
+                "Employer": 290
+            },
+            {
+                "InsuredDays": 9,
+                "Personal": 93,
+                "Employer": 326
+            },
+            {
+                "InsuredDays": 10,
+                "Personal": 104,
+                "Employer": 363
+            },
+            {
+                "InsuredDays": 11,
+                "Personal": 114,
+                "Employer": 399
+            },
+            {
+                "InsuredDays": 12,
+                "Personal": 124,
+                "Employer": 435
+            },
+            {
+                "InsuredDays": 13,
+                "Personal": 135,
+                "Employer": 471
+            },
+            {
+                "InsuredDays": 14,
+                "Personal": 145,
+                "Employer": 507
+            },
+            {
+                "InsuredDays": 15,
+                "Personal": 156,
+                "Employer": 543
+            },
+            {
+                "InsuredDays": 16,
+                "Personal": 165,
+                "Employer": 579
+            },
+            {
+                "InsuredDays": 17,
+                "Personal": 176,
+                "Employer": 616
+            },
+            {
+                "InsuredDays": 18,
+                "Personal": 186,
+                "Employer": 652
+            },
+            {
+                "InsuredDays": 19,
+                "Personal": 197,
+                "Employer": 688
+            },
+            {
+                "InsuredDays": 20,
+                "Personal": 207,
+                "Employer": 725
+            },
+            {
+                "InsuredDays": 21,
+                "Personal": 217,
+                "Employer": 761
+            },
+            {
+                "InsuredDays": 22,
+                "Personal": 228,
+                "Employer": 797
+            },
+            {
+                "InsuredDays": 23,
+                "Personal": 238,
+                "Employer": 833
+            },
+            {
+                "InsuredDays": 24,
+                "Personal": 249,
+                "Employer": 870
+            },
+            {
+                "InsuredDays": 25,
+                "Personal": 259,
+                "Employer": 906
+            },
+            {
+                "InsuredDays": 26,
+                "Personal": 269,
+                "Employer": 942
+            },
+            {
+                "InsuredDays": 27,
+                "Personal": 279,
+                "Employer": 978
+            },
+            {
+                "InsuredDays": 28,
+                "Personal": 290,
+                "Employer": 1014
+            },
+            {
+                "InsuredDays": 29,
+                "Personal": 300,
+                "Employer": 1050
+            },
+            {
+                "InsuredDays": 30,
+                "Personal": 311,
+                "Employer": 1087
+            }
+        ]
+    },
+    {
+        "InsuredSalaryLevel": 15840,
+        "InsuredItems": [
+            {
+                "InsuredDays": 1,
+                "Personal": 12,
+                "Employer": 43
+            },
+            {
+                "InsuredDays": 2,
+                "Personal": 24,
+                "Employer": 85
+            },
+            {
+                "InsuredDays": 3,
+                "Personal": 36,
+                "Employer": 127
+            },
+            {
+                "InsuredDays": 4,
+                "Personal": 48,
+                "Employer": 170
+            },
+            {
+                "InsuredDays": 5,
+                "Personal": 60,
+                "Employer": 212
+            },
+            {
+                "InsuredDays": 6,
+                "Personal": 73,
+                "Employer": 255
+            },
+            {
+                "InsuredDays": 7,
+                "Personal": 85,
+                "Employer": 298
+            },
+            {
+                "InsuredDays": 8,
+                "Personal": 97,
+                "Employer": 340
+            },
+            {
+                "InsuredDays": 9,
+                "Personal": 110,
+                "Employer": 382
+            },
+            {
+                "InsuredDays": 10,
+                "Personal": 122,
+                "Employer": 425
+            },
+            {
+                "InsuredDays": 11,
+                "Personal": 134,
+                "Employer": 468
+            },
+            {
+                "InsuredDays": 12,
+                "Personal": 146,
+                "Employer": 510
+            },
+            {
+                "InsuredDays": 13,
+                "Personal": 158,
+                "Employer": 553
+            },
+            {
+                "InsuredDays": 14,
+                "Personal": 170,
+                "Employer": 595
+            },
+            {
+                "InsuredDays": 15,
+                "Personal": 182,
+                "Employer": 637
+            },
+            {
+                "InsuredDays": 16,
+                "Personal": 194,
+                "Employer": 680
+            },
+            {
+                "InsuredDays": 17,
+                "Personal": 206,
+                "Employer": 723
+            },
+            {
+                "InsuredDays": 18,
+                "Personal": 219,
+                "Employer": 766
+            },
+            {
+                "InsuredDays": 19,
+                "Personal": 231,
+                "Employer": 807
+            },
+            {
+                "InsuredDays": 20,
+                "Personal": 243,
+                "Employer": 850
+            },
+            {
+                "InsuredDays": 21,
+                "Personal": 255,
+                "Employer": 893
+            },
+            {
+                "InsuredDays": 22,
+                "Personal": 267,
+                "Employer": 935
+            },
+            {
+                "InsuredDays": 23,
+                "Personal": 279,
+                "Employer": 978
+            },
+            {
+                "InsuredDays": 24,
+                "Personal": 291,
+                "Employer": 1020
+            },
+            {
+                "InsuredDays": 25,
+                "Personal": 303,
+                "Employer": 1062
+            },
+            {
+                "InsuredDays": 26,
+                "Personal": 315,
+                "Employer": 1105
+            },
+            {
+                "InsuredDays": 27,
+                "Personal": 328,
+                "Employer": 1148
+            },
+            {
+                "InsuredDays": 28,
+                "Personal": 340,
+                "Employer": 1190
+            },
+            {
+                "InsuredDays": 29,
+                "Personal": 353,
+                "Employer": 1232
+            },
+            {
+                "InsuredDays": 30,
+                "Personal": 365,
+                "Employer": 1275
+            }
+        ]
+    }
+]

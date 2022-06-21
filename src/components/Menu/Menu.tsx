@@ -15,6 +15,7 @@ import Health from "../GradingTable/Health/Health";
 import Labor from "../GradingTable/Labor/Labor";
 import Pension from "../GradingTable/Pension/Pension";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import PartTime from "../LaborPremium/PartTime/PartTime";
 
 export interface IMenuProps {
 }
@@ -67,31 +68,42 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavDropdown title="全民健康保險保險費負擔金額表">
                     <NavDropdown.Item as={Link} to="/health-premium-normal-employees">
                       公、民營事業、機構及有一定雇主之受僱者
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider /> ˇ
                     <NavDropdown.Item as={Link} to="/health-premium-public-servants">
                       公務人員、公職人員、志願役軍人
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
                     <NavDropdown.Item as={Link} to="/health-premium-private-staff">
                       私立學校教職員
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
                     <NavDropdown.Item as={Link} to="/health-premium-employers">
                       雇主、自營業主、專門職業及技術人員自行執業者
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
                     <NavDropdown.Item as={Link} to="/health-premium-associateion-member">
                       農會、漁會、水利會會員
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
                     <NavDropdown.Item as={Link} to="/health-premium-professional-member">
                       職業工會會員
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown title="勞工保險保險費分擔表">
+                    <NavDropdown.Item as={Link} to="/GeneralUnit">
+                      一般單位
+                      {'  '}<Badge pill bg="danger">New</Badge>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/PartTime">
+                      部分工時
+                      {'  '}<Badge pill bg="danger">New</Badge>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/ProfessionalUnion">
+                      職業工會被保險人(會員)月
+                      {'  '}<Badge pill bg="danger">New</Badge>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/FishingClub">
+                      漁會被保險人(會員)
+                      {'  '}<Badge pill bg="danger">New</Badge>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/Disabilities">
+                      庇護性就業身心障礙人員
                       {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
                   </NavDropdown>
@@ -113,6 +125,12 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
             <Route path="/health-premium-employers" element={<Employers />} />
             <Route path="/health-premium-associateion-member" element={<AssociationMember />} />
             <Route path="/health-premium-professional-member" element={<ProfessionalMember />} />
+
+            <Route path="/GeneralUnit" element={<PartTime />} />
+            <Route path="/PartTime" element={<PartTime />} />
+            <Route path="/ProfessionalUnion" element={<PartTime />} />
+            <Route path="/FishingClub" element={<PartTime />} />
+            <Route path="/Disabilities" element={<PartTime />} />
           </Routes>
         </BrowserRouter>
       </div>
