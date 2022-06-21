@@ -218,12 +218,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     let government = 0;
 
     // 預設為最高級距
-    let level = Number(laborInfo[laborInfo.length - 1].InsuredSalaryLevel.replace(",", ""));
+    let level = Number(laborInfo[laborInfo.length - 1].InsuredSalaryLevel)
     let temp = 0
 
     // 迭代搜尋
     for (let i = laborInfo.length - 1; i >= 0; i--) {
-      temp = Number(laborInfo[i].InsuredSalaryLevel.replace(",", ""))
+      temp = Number(laborInfo[i].InsuredSalaryLevel)
 
       if (Number(salary) <= temp)
         level = temp;
@@ -254,12 +254,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     let government = 0;
 
     // 預設為最高級距
-    let level = Number(healthInfo[healthInfo.length - 1].InsuredSalaryLevel.replace(",", ""));
+    let level = Number(healthInfo[healthInfo.length - 1].InsuredSalaryLevel);
     let temp = 0
 
     // 迭代搜尋
     for (let i = healthInfo.length - 1; i >= 0; i--) {
-      temp = Number(healthInfo[i].InsuredSalaryLevel.replace(",", ""));
+      temp = Number(healthInfo[i].InsuredSalaryLevel);
 
       if (Number(salary) <= temp)
         level = temp
@@ -293,12 +293,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     let pensionInfo = this.state.pensionInfo;
 
     // 預設為最高級距
-    let level = Number(pensionInfo[pensionInfo.length - 1].InsuredSalaryLevel.replace(",", ""));
+    let level = Number(pensionInfo[pensionInfo.length - 1].InsuredSalaryLevel)
     let temp = 0
 
     // 迭代搜尋
     for (let i = pensionInfo.length - 1; i >= 0; i--) {
-      temp = Number(pensionInfo[i].InsuredSalaryLevel.replace(",", ""));
+      temp = Number(pensionInfo[i].InsuredSalaryLevel)
 
       if (Number(salary) <= temp)
         level = temp
