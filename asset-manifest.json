@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-labor-health-insurance/static/css/main.77fea420.css",
-    "main.js": "/react-labor-health-insurance/static/js/main.21115535.js",
+    "main.js": "/react-labor-health-insurance/static/js/main.2cde1e1b.js",
     "static/js/787.f4b260e5.chunk.js": "/react-labor-health-insurance/static/js/787.f4b260e5.chunk.js",
     "index.html": "/react-labor-health-insurance/index.html",
     "main.77fea420.css.map": "/react-labor-health-insurance/static/css/main.77fea420.css.map",
-    "main.21115535.js.map": "/react-labor-health-insurance/static/js/main.21115535.js.map",
+    "main.2cde1e1b.js.map": "/react-labor-health-insurance/static/js/main.2cde1e1b.js.map",
     "787.f4b260e5.chunk.js.map": "/react-labor-health-insurance/static/js/787.f4b260e5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77fea420.css",
-    "static/js/main.21115535.js"
+    "static/js/main.2cde1e1b.js"
   ]
 }
