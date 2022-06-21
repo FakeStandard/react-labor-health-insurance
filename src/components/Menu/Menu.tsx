@@ -42,7 +42,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
     return (
       <div>
         {/* 路由 */}
-        <BrowserRouter>
+        <BrowserRouter basename="react-labor-health-insurance">
           <Navbar expand="lg" bg="dark" variant="dark">
             <Container>
               <NavbarBrand as={Link} to="/">2022勞健保與薪資查詢</NavbarBrand>
