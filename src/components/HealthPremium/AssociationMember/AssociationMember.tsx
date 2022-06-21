@@ -24,7 +24,7 @@ export default class AssociationMember extends React.Component<IAssociationMembe
 
   async componentDidMount() {
     // get json data
-    await fetch("./react-labor-health-insurance/JSON/HealthPremium/AssociationMember.json")
+    await fetch("./JSON/HealthPremium/AssociationMember.json")
       .then(res => res.json())
       .then(res => {
         // console.log(res);

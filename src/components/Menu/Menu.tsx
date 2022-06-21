@@ -53,7 +53,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavLink as={Link} to="/comparison-table">勞健保保費及勞退提繳三合一費用對照表</NavLink>
                   <NavDropdown title="投保薪資分級表">
                     <NavDropdown.Item as={Link} to="/grading-labor">
-                      勞工保險投保分級表
+                      勞工保險投保薪資分級表
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item as={Link} to="/grading-health">
