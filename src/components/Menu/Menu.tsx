@@ -69,7 +69,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                       公、民營事業、機構及有一定雇主之受僱者
                       {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Divider />
+                    <NavDropdown.Divider /> ˇ
                     <NavDropdown.Item as={Link} to="/health-premium-public-servants">
                       公務人員、公職人員、志願役軍人
                       {'  '}<Badge pill bg="danger">New</Badge>
