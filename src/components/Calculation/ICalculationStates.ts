@@ -1,5 +1,6 @@
 import { IHealthInfo } from "../../interface/GradingTable/IHealthInfo";
 import { ILaborInfo } from "../../interface/GradingTable/ILaborInfo";
+import { IPensionInfo } from "../../interface/GradingTable/IPensionInfo";
 
 export interface ICalculationStates {
     isLoaded: boolean,
@@ -9,7 +10,7 @@ export interface ICalculationStates {
     pensionLabel: string,
     laborInfo: ILaborInfo[],
     healthInfo: IHealthInfo[],
-    pensionInfo: IHealthInfo[],
+    pensionInfo: IPensionInfo[],
     labor: {
         salaryLevel: number,
         personal: number,

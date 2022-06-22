@@ -218,12 +218,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     let government = 0;
 
     // 預設為最高級距
-    let level = Number(laborInfo[laborInfo.length - 1].InsuredSalaryLevel)
+    let level = Number(laborInfo[laborInfo.length - 1].InsuredSalaryLevel.replace(",", ""));
     let temp = 0
 
     // 迭代搜尋
     for (let i = laborInfo.length - 1; i >= 0; i--) {
-      temp = Number(laborInfo[i].InsuredSalaryLevel)
+      temp = Number(laborInfo[i].InsuredSalaryLevel.replace(",", ""))
 
       if (Number(salary) <= temp)
         level = temp;
@@ -254,12 +254,12 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
     let government = 0;
 
     // 預設為最高級距
-    let level = Number(healthInfo[healthInfo.length - 1].InsuredSalaryLevel);
+    let level = Number(healthInfo[healthInfo.length - 1].InsuredSalaryLevel.replace(",", ""));
     let temp = 0
 
     // 迭代搜尋
     for (let i = healthInfo.length - 1; i >= 0; i--) {
-      temp = Number(healthInfo[i].InsuredSalaryLevel);
+      temp = Number(healthInfo[i].InsuredSalaryLevel.replace(",", ""));
 
       if (Number(salary) <= temp)
         level = temp
@@ -291,19 +291,23 @@ export default class Calculation extends React.Component<ICalculationProps, ICal
   // 設置勞退資訊
   setPension = async (salary: any) => {
     let pensionInfo = this.state.pensionInfo;
-
+    
     // 預設為最高級距
-    let level = Number(pensionInfo[pensionInfo.length - 1].InsuredSalaryLevel)
+    let level = Number(pensionInfo[pensionInfo.length - 1].PaymentOfWages.replace(",", ""));
     let temp = 0
-
+    
+    console.log(pensionInfo)
+    console.log(level)
+    
     // 迭代搜尋
     for (let i = pensionInfo.length - 1; i >= 0; i--) {
-      temp = Number(pensionInfo[i].InsuredSalaryLevel)
-
+      temp = Number(pensionInfo[i].PaymentOfWages.replace(",", ""));
+      
       if (Number(salary) <= temp)
-        level = temp
+      level = temp
       else break;
     }
+    console.log(level)
 
     // 計算
     // 投保金額 * 保險費率（5.17%）* 負擔比率（小數點後先四捨五入）* (本人+眷屬人數)
