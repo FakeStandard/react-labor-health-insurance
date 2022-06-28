@@ -1,0 +1,497 @@
+[
+    {
+        "SerialNum": "1",
+        "MainCategory": "農、林、漁、牧業",
+        "RateNum": "1",
+        "IndustryCategory": "農、林、牧業",
+        "IndustryRate": "0.15",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.22"
+    },
+    {
+        "SerialNum": "2",
+        "MainCategory": "農、林、漁、牧業",
+        "RateNum": "2",
+        "IndustryCategory": "漁業",
+        "IndustryRate": "0.12",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.19"
+    },
+    {
+        "SerialNum": "3",
+        "MainCategory": "礦業及土石採取業",
+        "RateNum": "3",
+        "IndustryCategory": "石油及天然氣礦業、砂、石採取及其他礦業",
+        "IndustryRate": "0.86",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.93"
+    },
+    {
+        "SerialNum": "4",
+        "MainCategory": "製造業",
+        "RateNum": "4",
+        "IndustryCategory": "食品及飼品、飲料及菸草製造業",
+        "IndustryRate": "0.13",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.2"
+    },
+    {
+        "SerialNum": "5",
+        "MainCategory": "製造業",
+        "RateNum": "5",
+        "IndustryCategory": "紡織業（紡織品製造業除外）",
+        "IndustryRate": "0.12",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.19"
+    },
+    {
+        "SerialNum": "6",
+        "MainCategory": "製造業",
+        "RateNum": "6",
+        "IndustryCategory": "紡織品製造業",
+        "IndustryRate": "0.09",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.16"
+    },
+    {
+        "SerialNum": "7",
+        "MainCategory": "製造業",
+        "RateNum": "7",
+        "IndustryCategory": "成衣及服飾品製造業",
+        "IndustryRate": "0.07",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.14"
+    },
+    {
+        "SerialNum": "8",
+        "MainCategory": "製造業",
+        "RateNum": "8",
+        "IndustryCategory": "皮革、毛皮及其製品製造業",
+        "IndustryRate": "0.11",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.18"
+    },
+    {
+        "SerialNum": "9",
+        "MainCategory": "製造業",
+        "RateNum": "9",
+        "IndustryCategory": "木竹製品及家具製造業",
+        "IndustryRate": "0.35",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.42"
+    },
+    {
+        "SerialNum": "10",
+        "MainCategory": "製造業",
+        "RateNum": "10",
+        "IndustryCategory": "紙漿、紙及紙製品製造業",
+        "IndustryRate": "0.3",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.37"
+    },
+    {
+        "SerialNum": "11",
+        "MainCategory": "製造業",
+        "RateNum": "11",
+        "IndustryCategory": "印刷及資料儲存媒體複製業",
+        "IndustryRate": "0.12",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.19"
+    },
+    {
+        "SerialNum": "12",
+        "MainCategory": "製造業",
+        "RateNum": "12",
+        "IndustryCategory": "石油及煤製品、化學材料及肥料、其他化學製品、藥品及醫用化學製品製造業",
+        "IndustryRate": "0.13",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.2"
+    },
+    {
+        "SerialNum": "13",
+        "MainCategory": "製造業",
+        "RateNum": "13",
+        "IndustryCategory": "橡膠製品、塑膠製品製造業",
+        "IndustryRate": "0.17",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.24"
+    },
+    {
+        "SerialNum": "14",
+        "MainCategory": "製造業",
+        "RateNum": "14",
+        "IndustryCategory": "非金屬礦物製品製造業",
+        "IndustryRate": "0.32",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.39"
+    },
+    {
+        "SerialNum": "15",
+        "MainCategory": "製造業",
+        "RateNum": "15",
+        "IndustryCategory": "基本金屬製造業",
+        "IndustryRate": "0.34",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.41"
+    },
+    {
+        "SerialNum": "16",
+        "MainCategory": "製造業",
+        "RateNum": "16",
+        "IndustryCategory": "金屬製品製造業（金屬刀具、手工具及模具、金屬容器製造業除外）",
+        "IndustryRate": "0.26",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.33"
+    },
+    {
+        "SerialNum": "17",
+        "MainCategory": "製造業",
+        "RateNum": "17",
+        "IndustryCategory": "金屬刀具、手工具及模具、金屬容器製造業",
+        "IndustryRate": "0.18",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.25"
+    },
+    {
+        "SerialNum": "18",
+        "MainCategory": "製造業",
+        "RateNum": "18",
+        "IndustryCategory": "電子零組件、電腦、電子產品及光學製品、電力設備及配備製造業",
+        "IndustryRate": "0.04",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.11"
+    },
+    {
+        "SerialNum": "19",
+        "MainCategory": "製造業",
+        "RateNum": "19",
+        "IndustryCategory": "機械設備製造業、產業用機械設備維修及安裝業",
+        "IndustryRate": "0.18",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.25"
+    },
+    {
+        "SerialNum": "20",
+        "MainCategory": "製造業",
+        "RateNum": "20",
+        "IndustryCategory": "汽車及其零件、其他運輸工具及其零件製造業",
+        "IndustryRate": "0.17",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.24"
+    },
+    {
+        "SerialNum": "21",
+        "MainCategory": "製造業",
+        "RateNum": "21",
+        "IndustryCategory": "其他製造業",
+        "IndustryRate": "0.11",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.18"
+    },
+    {
+        "SerialNum": "22",
+        "MainCategory": "電力及燃氣供應業",
+        "RateNum": "22",
+        "IndustryCategory": "電力及燃氣供應業",
+        "IndustryRate": "0.18",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.25"
+    },
+    {
+        "SerialNum": "23",
+        "MainCategory": "用水供應及污染整治業",
+        "RateNum": "23",
+        "IndustryCategory": "廢水及污水處理業、廢棄物清除、處理及資源物回收處理業、污染整治業",
+        "IndustryRate": "0.29",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.36"
+    },
+    {
+        "SerialNum": "24",
+        "MainCategory": "用水供應及污染整治業",
+        "RateNum": "24",
+        "IndustryCategory": "用水供應業",
+        "IndustryRate": "0.15",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.22"
+    },
+    {
+        "SerialNum": "25",
+        "MainCategory": "營建工程業",
+        "RateNum": "25",
+        "IndustryCategory": "建築工程業",
+        "IndustryRate": "0.51",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.58"
+    },
+    {
+        "SerialNum": "26",
+        "MainCategory": "營建工程業",
+        "RateNum": "26",
+        "IndustryCategory": "土木工程業",
+        "IndustryRate": "0.28",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.35"
+    },
+    {
+        "SerialNum": "27",
+        "MainCategory": "營建工程業",
+        "RateNum": "27",
+        "IndustryCategory": "庭園景觀工程業",
+        "IndustryRate": "0.34",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.41"
+    },
+    {
+        "SerialNum": "28",
+        "MainCategory": "營建工程業",
+        "RateNum": "28",
+        "IndustryCategory": "專門營造業（庭園景觀工程業；機電、管道及其他建築設備安裝業除外）",
+        "IndustryRate": "0.41",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.48"
+    },
+    {
+        "SerialNum": "29",
+        "MainCategory": "營建工程業",
+        "RateNum": "29",
+        "IndustryCategory": "機電、管道及其他建築設備安裝業",
+        "IndustryRate": "0.38",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.45"
+    },
+    {
+        "SerialNum": "30",
+        "MainCategory": "批發及零售業",
+        "RateNum": "30",
+        "IndustryCategory": "批發業",
+        "IndustryRate": "0.1",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.17"
+    },
+    {
+        "SerialNum": "31",
+        "MainCategory": "批發及零售業",
+        "RateNum": "31",
+        "IndustryCategory": "零售業",
+        "IndustryRate": "0.09",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.16"
+    },
+    {
+        "SerialNum": "32",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "32",
+        "IndustryCategory": "陸上運輸業",
+        "IndustryRate": "0.32",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.39"
+    },
+    {
+        "SerialNum": "33",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "33",
+        "IndustryCategory": "水上運輸業",
+        "IndustryRate": "0.78",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.85"
+    },
+    {
+        "SerialNum": "34",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "34",
+        "IndustryCategory": "航空運輸業",
+        "IndustryRate": "0.12",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.19"
+    },
+    {
+        "SerialNum": "35",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "35",
+        "IndustryCategory": "報關業及船務代理業",
+        "IndustryRate": "0.09",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.16"
+    },
+    {
+        "SerialNum": "36",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "36",
+        "IndustryCategory": "運輸輔助業（報關業及船務代理業、陸上運輸輔助業除外）、倉儲業",
+        "IndustryRate": "0.14",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.21"
+    },
+    {
+        "SerialNum": "37",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "37",
+        "IndustryCategory": "陸上運輸輔助業",
+        "IndustryRate": "0.12",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.19"
+    },
+    {
+        "SerialNum": "38",
+        "MainCategory": "運輸及倉儲業",
+        "RateNum": "38",
+        "IndustryCategory": "郵政及遞送服務業",
+        "IndustryRate": "0.11",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.18"
+    },
+    {
+        "SerialNum": "39",
+        "MainCategory": "住宿及餐飲業",
+        "RateNum": "39",
+        "IndustryCategory": "住宿業、餐飲業",
+        "IndustryRate": "0.1",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.17"
+    },
+    {
+        "SerialNum": "40",
+        "MainCategory": "出版影音及資通訊業",
+        "RateNum": "40",
+        "IndustryCategory": "出版業、影片及電視節目業、聲音錄製及音樂發行業、廣播、電視節目編排及傳播業",
+        "IndustryRate": "0.05",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.12"
+    },
+    {
+        "SerialNum": "41",
+        "MainCategory": "出版影音及資通訊業",
+        "RateNum": "41",
+        "IndustryCategory": "電信業",
+        "IndustryRate": "0.05",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.12"
+    },
+    {
+        "SerialNum": "42",
+        "MainCategory": "出版影音及資通訊業",
+        "RateNum": "42",
+        "IndustryCategory": "電腦程式設計、諮詢及相關服務業、資訊服務業",
+        "IndustryRate": "0.04",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.11"
+    },
+    {
+        "SerialNum": "43",
+        "MainCategory": "金融及保險業",
+        "RateNum": "43",
+        "IndustryCategory": "金融服務業、保險業、證券期貨及金融輔助業",
+        "IndustryRate": "0.04",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.11"
+    },
+    {
+        "SerialNum": "44",
+        "MainCategory": "不動產業",
+        "RateNum": "44",
+        "IndustryCategory": "不動產開發業、不動產經營及相關服務業",
+        "IndustryRate": "0.08",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.15"
+    },
+    {
+        "SerialNum": "45",
+        "MainCategory": "專業、科學及技術服務業",
+        "RateNum": "45",
+        "IndustryCategory": "法律及會計服務業、企業總管理機構及管理顧問業、建築、工程服務及技術檢測、分析服務業、廣告業及市場研究業、專門設計業、獸醫業、其他專業、科學及技術服務業",
+        "IndustryRate": "0.07",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.14"
+    },
+    {
+        "SerialNum": "46",
+        "MainCategory": "專業、科學及技術服務業",
+        "RateNum": "46",
+        "IndustryCategory": "研究發展服務業",
+        "IndustryRate": "0.05",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.12"
+    },
+    {
+        "SerialNum": "47",
+        "MainCategory": "支援服務業",
+        "RateNum": "47",
+        "IndustryCategory": "旅行及其他相關服務業",
+        "IndustryRate": "0.06",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.13"
+    },
+    {
+        "SerialNum": "48",
+        "MainCategory": "支援服務業",
+        "RateNum": "48",
+        "IndustryCategory": "租賃業、人力仲介及供應業、保全及偵探業、建築物及綠化服務業、行政支援服務業",
+        "IndustryRate": "0.15",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.22"
+    },
+    {
+        "SerialNum": "49",
+        "MainCategory": "公共行政及國防；強制性社會安全",
+        "RateNum": "49",
+        "IndustryCategory": "公共行政及國防、強制性社會安全、國際組織及外國機構",
+        "IndustryRate": "0.1",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.17"
+    },
+    {
+        "SerialNum": "50",
+        "MainCategory": "教育業",
+        "RateNum": "50",
+        "IndustryCategory": "教育業",
+        "IndustryRate": "0.04",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.11"
+    },
+    {
+        "SerialNum": "51",
+        "MainCategory": "醫療保健及社會工作服務業",
+        "RateNum": "51",
+        "IndustryCategory": "醫療保健業、居住型照顧服務業、其他社會工作服務業",
+        "IndustryRate": "0.04",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.11"
+    },
+    {
+        "SerialNum": "52",
+        "MainCategory": "藝術、娛樂及休閒服務業",
+        "RateNum": "52",
+        "IndustryCategory": "創作及藝術表演業、圖書館、檔案保存、博物館及類似機構、博弈業、運動、娛樂及休閒服務業",
+        "IndustryRate": "0.08",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.15"
+    },
+    {
+        "SerialNum": "53",
+        "MainCategory": "其他服務業",
+        "RateNum": "53",
+        "IndustryCategory": "宗教、職業及類似組織",
+        "IndustryRate": "0.06",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.13"
+    },
+    {
+        "SerialNum": "54",
+        "MainCategory": "其他服務業",
+        "RateNum": "54",
+        "IndustryCategory": "個人及家庭用品維修業",
+        "IndustryRate": "0.15",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.22"
+    },
+    {
+        "SerialNum": "55",
+        "MainCategory": "其他服務業",
+        "RateNum": "55",
+        "IndustryCategory": "未分類其他服務業",
+        "IndustryRate": "0.11",
+        "CommuteRate": "0.07",
+        "OccupationalAccidentRate": "0.18"
+    }
+]
