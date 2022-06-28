@@ -107,16 +107,9 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavLink as={Link} to="/labor-premium-burden-ratio">保險費負擔比例一覽表
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavLink>
-                  <NavDropdown title="勞工保險職災費率表及行細類編號表">
-                    <NavDropdown.Item as={Link} to="/oa-rate-table">
-                      職災費率表
-                      {'  '}<Badge pill bg="danger">New</Badge>
-                    </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/labor-premium-disabilities">
-                      行業細類編號表
-                      {'  '}<Badge pill bg="danger">New</Badge>
-                    </NavDropdown.Item>
-                  </NavDropdown>
+                  <NavLink as={Link} to="/oa-rate-table">職災費率表
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavLink>
                 </Nav>
               </NavbarCollapse>
             </Container>
