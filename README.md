@@ -11,7 +11,7 @@
 
 :pushpin: 自 2022/1/1 起勞工退休金級距調整
 
-:question: 使用 Router 後呼叫 JSON 檔案的路徑會少最上層...
+:question: 使用路由巡覽後每次重新整理會找不到路徑(除了首頁)
 
 ## History
 | Date       | Description                                                      |
