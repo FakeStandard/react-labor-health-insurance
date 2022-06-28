@@ -16,6 +16,7 @@ import Labor from "../GradingTable/Labor/Labor";
 import Pension from "../GradingTable/Pension/Pension";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import PartTime from "../LaborPremium/PartTime/PartTime";
+import LaborRatio from "../BurdenRatio/Labor/LaborRatio";
 
 export interface IMenuProps {
 }
@@ -86,27 +87,25 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                     </NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown title="勞工保險保險費分擔表">
-                    <NavDropdown.Item as={Link} to="/GeneralUnit">
+                    <NavDropdown.Item as={Link} to="/labor-premium-generalUnit">
                       一般單位
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/PartTime">
+                    <NavDropdown.Item as={Link} to="/labor-premium-partTime">
                       部分工時
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/ProfessionalUnion">
+                    <NavDropdown.Item as={Link} to="/labor-premium-professionalUnion">
                       職業工會被保險人(會員)月
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/FishingClub">
+                    <NavDropdown.Item as={Link} to="/labor-premium-fishingClub">
                       漁會被保險人(會員)
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/Disabilities">
+                    <NavDropdown.Item as={Link} to="/labor-premium-disabilities">
                       庇護性就業身心障礙人員
-                      {'  '}<Badge pill bg="danger">New</Badge>
                     </NavDropdown.Item>
                   </NavDropdown>
+                  <NavLink as={Link} to="/labor-premium-burden-ratio">保險費負擔比例一覽表
+                    {'  '}<Badge pill bg="danger">New</Badge>
+                  </NavLink>
                 </Nav>
               </NavbarCollapse>
             </Container>
@@ -119,18 +118,22 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
             <Route path="/grading-labor" element={<Labor />} />
             <Route path="/grading-health" element={<Health />} />
             <Route path="/grading-pension" element={<Pension />} />
+
+            {/* 全民健康保險保險費負擔金額表 */}
             <Route path="/health-premium-normal-employees" element={<NormalEmployees />} />
             <Route path="/health-premium-public-servants" element={<PublicServants />} />
             <Route path="/health-premium-private-staff" element={<PrivateStaff />} />
             <Route path="/health-premium-employers" element={<Employers />} />
             <Route path="/health-premium-associateion-member" element={<AssociationMember />} />
             <Route path="/health-premium-professional-member" element={<ProfessionalMember />} />
+            {/* 勞工保險保險費分擔表 */}
+            <Route path="/labor-premium-generalUnit" element={<PartTime />} />
+            <Route path="/labor-premium-partTime" element={<PartTime />} />
+            <Route path="/labor-premium-professionalUnion" element={<PartTime />} />
+            <Route path="/labor-premium-fishingClub" element={<PartTime />} />
+            <Route path="/labor-premium-disabilities" element={<PartTime />} />
 
-            <Route path="/GeneralUnit" element={<PartTime />} />
-            <Route path="/PartTime" element={<PartTime />} />
-            <Route path="/ProfessionalUnion" element={<PartTime />} />
-            <Route path="/FishingClub" element={<PartTime />} />
-            <Route path="/Disabilities" element={<PartTime />} />
+            <Route path="/labor-premium-burden-ratio" element={<LaborRatio />} />
           </Routes>
         </BrowserRouter>
       </div>

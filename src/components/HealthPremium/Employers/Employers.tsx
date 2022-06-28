@@ -6,7 +6,6 @@ import "./Employers.css"
 export interface IEmployersProps {
 
 }
-
 export interface IEmployersStates {
   isLoaded: boolean,
   items: IEmployersInfo[],

@@ -27,6 +27,7 @@
 | 2022/06/16 | Add Page - 全民健康保險保險費負擔金額表： 一、公、民營事業、機構及有一定雇主之受僱者 |
 | 2022/06/17 | Add Page - 全民健康保險保險費負擔金額表：<br> 二、公務人員、公職人員、志願役軍人 <br> 三、私立學校教職員 <br> 四、雇主、自營業主、專門職業及技術人員自行執業者 <br> 五、農會、漁會、水利會會員 <br> 六、職業工會會員 |
 | 2022/06/17 | 使用 Router 巡覽頁面 |
+| 2022/06/28 | Add Page - 保險費負擔比例一覽表|
 
 ## Product
 [Labor Health Insurance](https://fakestandard.github.io/react-labor-health-insurance)
@@ -51,3 +52,6 @@
 [農會、漁會、水利會會員健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=284&Mid=A110689)
 
 [職業工會會員健保費負擔金額表](https://data.nhi.gov.tw/Datasets/DatasetDetail.aspx?id=282&Mid=A110689)
+
+### 負擔比例一覽表
+[保險費負擔比例一覽表](https://data.gov.tw/dataset/40324)
