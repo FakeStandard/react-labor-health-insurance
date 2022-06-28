@@ -48,12 +48,12 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
         <BrowserRouter basename="react-labor-health-insurance">
           <Navbar expand="lg" bg="dark" variant="dark">
             <Container>
-              <NavbarBrand as={Link} to="/">2022勞健保與薪資查詢</NavbarBrand>
+              <NavbarBrand as={Link} to="/">2022勞健保查詢與薪資即時試算</NavbarBrand>
               <NavbarToggle aria-controls="menu-navbar" />
               <NavbarCollapse id="menu-navbar">
                 <Nav>
                   <NavLink as={Link} to="/calculation">薪資即時試算</NavLink>
-                  <NavLink as={Link} to="/comparison-table">勞健保保費及勞退提繳三合一費用對照表</NavLink>
+                  <NavLink as={Link} to="/comparison-table">費用對照表</NavLink>
                   <NavDropdown title="投保薪資分級表">
                     <NavDropdown.Item as={Link} to="/grading-labor">
                       勞工保險投保薪資分級表
