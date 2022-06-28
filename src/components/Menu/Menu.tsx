@@ -17,6 +17,7 @@ import Pension from "../GradingTable/Pension/Pension";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import PartTime from "../LaborPremium/PartTime/PartTime";
 import LaborRatio from "../BurdenRatio/Labor/LaborRatio";
+import OccupationalAccidentRateTable from "../OccupationalAccidentRateTable/OccupationalAccidentRateTable";
 
 export interface IMenuProps {
 }
@@ -106,6 +107,16 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
                   <NavLink as={Link} to="/labor-premium-burden-ratio">保險費負擔比例一覽表
                     {'  '}<Badge pill bg="danger">New</Badge>
                   </NavLink>
+                  <NavDropdown title="勞工保險職災費率表及行細類編號表">
+                    <NavDropdown.Item as={Link} to="/oa-rate-table">
+                      職災費率表
+                      {'  '}<Badge pill bg="danger">New</Badge>
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/labor-premium-disabilities">
+                      行業細類編號表
+                      {'  '}<Badge pill bg="danger">New</Badge>
+                    </NavDropdown.Item>
+                  </NavDropdown>
                 </Nav>
               </NavbarCollapse>
             </Container>
@@ -134,6 +145,7 @@ export default class Menu extends React.Component<IMenuProps, IMenuStates> {
             <Route path="/labor-premium-disabilities" element={<PartTime />} />
 
             <Route path="/labor-premium-burden-ratio" element={<LaborRatio />} />
+            <Route path="/oa-rate-table" element={<OccupationalAccidentRateTable />} />
           </Routes>
         </BrowserRouter>
       </div>
