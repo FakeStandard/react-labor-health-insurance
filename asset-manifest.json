@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-labor-health-insurance/static/css/main.fc7eb4ec.css",
-    "main.js": "/react-labor-health-insurance/static/js/main.5ffc008a.js",
+    "main.css": "/react-labor-health-insurance/static/css/main.45c664e4.css",
+    "main.js": "/react-labor-health-insurance/static/js/main.a9b99992.js",
     "static/js/787.f4b260e5.chunk.js": "/react-labor-health-insurance/static/js/787.f4b260e5.chunk.js",
     "index.html": "/react-labor-health-insurance/index.html",
-    "main.fc7eb4ec.css.map": "/react-labor-health-insurance/static/css/main.fc7eb4ec.css.map",
-    "main.5ffc008a.js.map": "/react-labor-health-insurance/static/js/main.5ffc008a.js.map",
+    "main.45c664e4.css.map": "/react-labor-health-insurance/static/css/main.45c664e4.css.map",
+    "main.a9b99992.js.map": "/react-labor-health-insurance/static/js/main.a9b99992.js.map",
     "787.f4b260e5.chunk.js.map": "/react-labor-health-insurance/static/js/787.f4b260e5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc7eb4ec.css",
-    "static/js/main.5ffc008a.js"
+    "static/css/main.45c664e4.css",
+    "static/js/main.a9b99992.js"
   ]
 }

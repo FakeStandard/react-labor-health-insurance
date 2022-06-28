@@ -1,0 +1,261 @@
+[
+    {
+        "TypeOfInsured": "產業勞工及交通、公用事業之員工",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "產業勞工及交通、公用事業之員工",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "產業勞工及交通、公用事業之員工",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "公司、行號之員工",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "公司、行號之員工",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "公司、行號之員工",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "新聞、文化、公益、合作事業之員工",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "新聞、文化、公益、合作事業之員工",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "新聞、文化、公益、合作事業之員工",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "受僱從事漁業生產者",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "受僱從事漁業生產者",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "受僱從事漁業生產者",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "政府機關及公、私立學校之員工",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "政府機關及公、私立學校之員工",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "政府機關及公、私立學校之員工",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "勞工保險自願加保員工",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "勞工保險自願加保員工",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "勞工保險自願加保員工",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "職訓機構受訓者",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "職訓機構受訓者",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "無一定雇主之職業工人",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "60%",
+        "Employer": "",
+        "Goverment": "40%"
+    },
+    {
+        "TypeOfInsured": "無一定雇主之職業工人",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "60%",
+        "Employer": "",
+        "Goverment": "40%"
+    },
+    {
+        "TypeOfInsured": "無一定雇主之漁會甲類會員",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "",
+        "Goverment": "80%"
+    },
+    {
+        "TypeOfInsured": "無一定雇主之漁會甲類會員",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "20%",
+        "Employer": "",
+        "Goverment": "80%"
+    },
+    {
+        "TypeOfInsured": "漁民上岸候船",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "100%",
+        "Employer": "",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "外僱船員",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "80%",
+        "Employer": "",
+        "Goverment": "20%"
+    },
+    {
+        "TypeOfInsured": "外僱船員",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "80%",
+        "Employer": "",
+        "Goverment": "20%"
+    },
+    {
+        "TypeOfInsured": "外僱船員上岸候船",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "100%",
+        "Employer": "",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "自願參加職業災害保險人員",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "被裁減資遣續保人員",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "80%",
+        "Employer": "",
+        "Goverment": "20%"
+    },
+    {
+        "TypeOfInsured": "育嬰留停續保人員（政府單位）",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "育嬰留停續保人員（政府單位）",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    },
+    {
+        "TypeOfInsured": "育嬰留停續保人員（政府單位以外之投保單位）",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "",
+        "Goverment": "80%"
+    },
+    {
+        "TypeOfInsured": "育嬰留停續保人員（政府單位以外之投保單位）",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "",
+        "Goverment": "80%"
+    },
+    {
+        "TypeOfInsured": "職災勞工離職後續保人員",
+        "PremiumCategory": "勞工保險-普通事故保險費",
+        "Personal": "20%",
+        "Employer": "",
+        "Goverment": "80%"
+    },
+    {
+        "TypeOfInsured": "參加就業保險及勞工職業災害保險之人員",
+        "PremiumCategory": "勞工保險-職業災害保險費",
+        "Personal": "",
+        "Employer": "100%",
+        "Goverment": ""
+    },
+    {
+        "TypeOfInsured": "參加就業保險及勞工職業災害保險之人員",
+        "PremiumCategory": "就業保險費",
+        "Personal": "20%",
+        "Employer": "70%",
+        "Goverment": "10%"
+    }
+]
